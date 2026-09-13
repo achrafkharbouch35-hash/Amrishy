@@ -2824,9 +2824,11 @@ if (modalAdd) {
    UPDATE BAG
 ===================================================== */
 
-function updateBag() {
+/* =====================================================
+   UPDATE BAG — VERSION CORRIGÉE
+===================================================== */
 
-    if (!bagItems) return;
+function updateBag() {
 
     if (bag.length === 0) {
 
@@ -2834,10 +2836,7 @@ function updateBag() {
 
             <div class="empty-bag">
 
-                <i class="
-                    fa-solid
-                    fa-spray-can-sparkles
-                "></i>
+                <i class="fa-solid fa-spray-can-sparkles"></i>
 
                 <h4>
                     Votre sélection est vide
@@ -2859,23 +2858,19 @@ function updateBag() {
 
         `;
 
-        const emptyBagBtn =
-            document.getElementById(
-                "emptyBagBtn"
-            );
+        const emptyButton =
+            document.getElementById("emptyBagBtn");
 
-        if (emptyBagBtn) {
+        if (emptyButton) {
 
-            emptyBagBtn.addEventListener(
+            emptyButton.addEventListener(
                 "click",
                 () => {
 
                     closeBag();
 
                     const collection =
-                        document.getElementById(
-                            "collection"
-                        );
+                        document.getElementById("collection");
 
                     if (collection) {
 
@@ -2894,77 +2889,99 @@ function updateBag() {
 
         bagItems.innerHTML = "";
 
-        bag.forEach(
-            (item, index) => {
+        bag.forEach((item, index) => {
 
-                const itemElement =
-                    document.createElement(
-                        "div"
-                    );
-
-                itemElement.className =
-                    "bag-item";
-
-                const product =
-                    products.find(
-                        p => p.id === item.id
-                    );
-
-                const image =
-                    product
-                        ? getProductImage(product)
-                        : "";
-
-                itemElement.innerHTML = `
-
-                    <div class="bag-mini-bottle">
-
-                        <img
-                            src="${image}"
-                            alt="${item.name}"
-                        >
-
-                    </div>
-
-                    <div class="bag-item-info">
-
-                        <h4>
-                            ${item.name}
-                        </h4>
-
-                        <span>
-                            ${item.size} ML
-                            ×
-                            ${item.quantity}
-                        </span>
-
-                        <button
-                            class="bag-item-remove"
-                            data-index="${index}"
-                        >
-                            Supprimer
-                        </button>
-
-                    </div>
-
-                    <div class="bag-item-price">
-
-                        ${
-                            item.price *
-                            item.quantity
-                        } DH
-
-                    </div>
-
-                `;
-
-                bagItems.appendChild(
-                    itemElement
+            const product =
+                products.find(
+                    p => p.id === item.id
                 );
 
-            }
-        );
+            if (!product) return;
 
+            /*
+             * Image du parfum.
+             *
+             * Ton objet product doit contenir :
+             *
+             * image: "nom-du-fichier.jpg"
+             *
+             */
+
+            const image =
+                product.image || "";
+
+            const itemElement =
+                document.createElement("div");
+
+            itemElement.className =
+                "bag-item";
+
+            itemElement.innerHTML = `
+
+                <div class="bag-item-image">
+
+                    ${
+                        image
+                        ?
+                        `
+                        <img
+                            src="${image}"
+                            alt="${product.name}"
+                            loading="lazy"
+                        >
+                        `
+                        :
+                        `
+                        <div class="bag-image-placeholder">
+                            <i class="fa-solid fa-spray-can-sparkles"></i>
+                        </div>
+                        `
+                    }
+
+                </div>
+
+
+                <div class="bag-item-info">
+
+                    <span class="bag-item-category">
+                        ${product.categoryLabel || ""}
+                    </span>
+
+                    <h4>
+                        ${item.name}
+                    </h4>
+
+                    <span class="bag-item-size">
+                        ${item.size} ML × ${item.quantity}
+                    </span>
+
+                    <button
+                        class="bag-item-remove"
+                        data-index="${index}"
+                    >
+                        <i class="fa-solid fa-trash-can"></i>
+                        Supprimer
+                    </button>
+
+                </div>
+
+
+                <div class="bag-item-price">
+
+                    ${item.price * item.quantity} DH
+
+                </div>
+
+            `;
+
+            bagItems.appendChild(itemElement);
+
+        });
+
+
+        /*
+         * SUPPRESSION DES ARTICLES
+         */
 
         document.querySelectorAll(
             ".bag-item-remove"
@@ -2993,6 +3010,10 @@ function updateBag() {
     }
 
 
+    /*
+     * TOTAL
+     */
+
     const total =
         bag.reduce(
             (sum, item) =>
@@ -3002,12 +3023,8 @@ function updateBag() {
             0
         );
 
-    if (bagTotal) {
-
-        bagTotal.textContent =
-            total + " DH";
-
-    }
+    bagTotal.textContent =
+        total + " DH";
 
 }
 
