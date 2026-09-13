@@ -11,11 +11,6 @@
 
 const WHATSAPP_NUMBER = "212600000000";
 
-
-/* =====================================================
-   DOSSIER DES IMAGES
-===================================================== */
-
 const IMAGE_PATH = "";
 
 
@@ -1802,9 +1797,7 @@ const products = [
 ===================================================== */
 
 function getProductImage(product) {
-
     return IMAGE_PATH + product.image;
-
 }
 
 
@@ -1812,38 +1805,18 @@ function getProductImage(product) {
    STATE
 ===================================================== */
 
-/* =====================================================
-   STATE
-===================================================== */
-
 let currentProduct = null;
-
 let currentSize = 50;
-
 let currentPrice = 70;
-
 let quantity = 1;
 
 let bag = [];
-
 let favorites = [];
 
 
 /* =====================================================
    TARIFS ÉLIXIR
 ===================================================== */
-
-/*
-   EAU DE PARFUM
-   30 ML  = 50 DH
-   50 ML  = 70 DH
-   100 ML = 120 DH
-
-   EXTRAIT DE PARFUM
-   30 ML  = 150 DH
-   50 ML  = 170 DH
-   100 ML = 320 DH
-*/
 
 const PRICES = {
 
@@ -1863,42 +1836,70 @@ const PRICES = {
 
 
 /* =====================================================
-   TYPE DE PARFUM
+   PARFUMS CLASSÉS EN EXTRAIT
 ===================================================== */
 
 /*
-   Par défaut, tous les parfums sont considérés
-   comme des Eaux de Parfum.
+   Ces références utilisent la grille EXTRAIT.
 
-   Pour mettre un parfum en EXTRAIT,
-   ajoute simplement :
-
-   type: "extrait",
-
-   dans son produit.
-
-   Exemple :
-
-   {
-       id: "F01",
-       ...
-       type: "extrait",
-       ...
-   }
+   Tous les autres parfums utilisent la grille
+   EAU DE PARFUM.
 */
+
+const EXTRAIT_IDS = new Set([
+
+    "F11",
+    "F26",
+    "F32",
+    "F35",
+    "F36",
+    "F37",
+    "F40",
+
+    "H120",
+    "H122",
+    "H130",
+    "H132",
+    "H137",
+    "H138",
+    "H142",
+    "H143",
+    "H144"
+
+]);
+
+
+/* =====================================================
+   TYPE DU PARFUM
+===================================================== */
 
 function getProductType(product) {
 
-    if (
-        product &&
-        product.type === "extrait"
-    ) {
+    if (!product) {
+        return "eau";
+    }
 
+    if (product.type === "extrait") {
         return "extrait";
+    }
 
+    if (EXTRAIT_IDS.has(product.id)) {
+        return "extrait";
     }
 
     return "eau";
+}
+
+
+/* =====================================================
+   LABEL DU TYPE
+===================================================== */
+
+function getProductTypeLabel(product) {
+
+    return getProductType(product) === "extrait"
+        ? "EXTRAIT DE PARFUM"
+        : "EAU DE PARFUM";
 
 }
 
@@ -1909,8 +1910,7 @@ function getProductType(product) {
 
 function getProductPrice(product, size) {
 
-    const type =
-        getProductType(product);
+    const type = getProductType(product);
 
     return PRICES[type][size];
 
@@ -2024,9 +2024,7 @@ window.addEventListener("load", () => {
             loader.classList.add("hidden");
         }
 
-        document.body.classList.remove(
-            "modal-open"
-        );
+        document.body.classList.remove("modal-open");
 
     }, 1800);
 
@@ -2064,7 +2062,7 @@ function createParticles() {
             (-Math.random() * 15) + "s";
 
         particle.style.opacity =
-            (0.15 + Math.random() * 0.5);
+            0.15 + Math.random() * 0.5;
 
         particles.appendChild(particle);
 
@@ -2084,13 +2082,9 @@ window.addEventListener("scroll", () => {
     if (!navbar) return;
 
     if (window.scrollY > 60) {
-
         navbar.classList.add("scrolled");
-
     } else {
-
         navbar.classList.remove("scrolled");
-
     }
 
 });
@@ -2116,10 +2110,10 @@ if (cursor && follower) {
 
     document.addEventListener(
         "mousemove",
-        (e) => {
+        (event) => {
 
-            mouseX = e.clientX;
-            mouseY = e.clientY;
+            mouseX = event.clientX;
+            mouseY = event.clientY;
 
             cursor.style.left =
                 mouseX + "px";
@@ -2133,10 +2127,10 @@ if (cursor && follower) {
     function animateCursor() {
 
         followerX +=
-            (mouseX - followerX) * .12;
+            (mouseX - followerX) * 0.12;
 
         followerY +=
-            (mouseY - followerY) * .12;
+            (mouseY - followerY) * 0.12;
 
         follower.style.left =
             followerX + "px";
@@ -2158,18 +2152,23 @@ if (cursor && follower) {
 /* =====================================================
    PRODUCT IMAGE HTML
 ===================================================== */
+
 function bottleHTML(product) {
+
     return `
         <div class="product-image-wrapper">
-            <img 
+
+            <img
                 src="${getProductImage(product)}"
                 alt="${product.name}"
                 class="product-real-image"
                 loading="lazy"
                 onerror="this.style.display='none';"
             >
+
         </div>
     `;
+
 }
 
 
@@ -2204,6 +2203,12 @@ function renderProducts(filter = "all") {
             const isFavorite =
                 favorites.includes(product.id);
 
+            const typeLabel =
+                getProductTypeLabel(product);
+
+            const startingPrice =
+                getProductPrice(product, 30);
+
             const card =
                 document.createElement("article");
 
@@ -2221,7 +2226,7 @@ function renderProducts(filter = "all") {
                             <div class="product-badge">
                                 ${product.badge}
                             </div>
-                          `
+                        `
                         : ""
                 }
 
@@ -2232,7 +2237,9 @@ function renderProducts(filter = "all") {
                     "
                     data-favorite="${product.id}"
                     aria-label="Ajouter aux favoris"
+                    type="button"
                 >
+
                     <i class="
                         ${
                             isFavorite
@@ -2241,6 +2248,7 @@ function renderProducts(filter = "all") {
                         }
                         fa-heart
                     "></i>
+
                 </button>
 
                 <div class="product-card-image">
@@ -2252,29 +2260,46 @@ function renderProducts(filter = "all") {
                 <div class="product-info">
 
                     <span class="product-category">
+
                         ${product.categoryLabel}
+
+                        ·
+
+                        ${typeLabel}
+
                     </span>
 
                     <span class="product-reference">
+
                         Réf. ${product.catalogue}
+
                     </span>
 
                     <h3 class="product-name">
+
                         ${product.name}
+
                     </h3>
 
                     <p class="product-tagline">
+
                         ${product.tagline}
+
                     </p>
 
                     <div class="product-bottom">
 
                         <span class="product-price">
-                            À partir de ${product.price30} DH
+
+                            À partir de
+                            ${startingPrice} DH
+
                         </span>
 
                         <span class="product-open">
+
                             <i class="fa-solid fa-arrow-right"></i>
+
                         </span>
 
                     </div>
@@ -2370,15 +2395,11 @@ document.querySelectorAll(
                 ".filter-btn"
             ).forEach(btn => {
 
-                btn.classList.remove(
-                    "active"
-                );
+                btn.classList.remove("active");
 
             });
 
-            button.classList.add(
-                "active"
-            );
+            button.classList.add("active");
 
             renderProducts(
                 button.dataset.filter
@@ -2404,62 +2425,105 @@ function openProduct(id) {
 
     if (!currentProduct) return;
 
-   currentSize = 50;
+    currentSize = 50;
 
-currentPrice =
-    getProductPrice(
-        currentProduct,
-        currentSize
-    );
+    currentPrice =
+        getProductPrice(
+            currentProduct,
+            currentSize
+        );
 
     quantity = 1;
 
 
-    if (modalTitle)
+    if (modalTitle) {
+
         modalTitle.textContent =
             currentProduct.name;
 
-    if (modalCategory)
-        modalCategory.textContent =
-            currentProduct.categoryLabel;
+    }
 
-    if (modalTagline)
+
+    if (modalCategory) {
+
+        modalCategory.textContent =
+            currentProduct.categoryLabel +
+            " · " +
+            getProductTypeLabel(currentProduct);
+
+    }
+
+
+    if (modalTagline) {
+
         modalTagline.textContent =
             currentProduct.tagline;
 
-    if (modalDescription)
+    }
+
+
+    if (modalDescription) {
+
         modalDescription.textContent =
             currentProduct.description;
 
-    if (modalTop)
+    }
+
+
+    if (modalTop) {
+
         modalTop.textContent =
             currentProduct.top;
 
-    if (modalHeart)
+    }
+
+
+    if (modalHeart) {
+
         modalHeart.textContent =
             currentProduct.heart;
 
-    if (modalBase)
+    }
+
+
+    if (modalBase) {
+
         modalBase.textContent =
             currentProduct.base;
 
-    if (modalPrice)
+    }
+
+
+    if (modalPrice) {
+
         modalPrice.textContent =
             currentPrice + " DH";
 
-    if (modalBottleName)
+    }
+
+
+    if (modalBottleName) {
+
         modalBottleName.textContent =
             currentProduct.shortName;
 
-    if (quantityValue)
+    }
+
+
+    if (quantityValue) {
+
         quantityValue.textContent =
             quantity;
+
+    }
 
 
     /* PHOTO DU PRODUIT DANS LE MODAL */
 
     const modalImage =
-        document.getElementById("modalProductImage");
+        document.getElementById(
+            "modalProductImage"
+        );
 
     if (modalImage) {
 
@@ -2469,8 +2533,13 @@ currentPrice =
         modalImage.alt =
             currentProduct.name;
 
+        modalImage.style.display =
+            "block";
+
     }
 
+
+    /* PRIX DES FORMATS */
 
     document.querySelectorAll(
         ".size-btn"
@@ -2479,11 +2548,11 @@ currentPrice =
         const size =
             Number(button.dataset.size);
 
-       let price =
-    getProductPrice(
-        currentProduct,
-        size
-    );
+        const price =
+            getProductPrice(
+                currentProduct,
+                size
+            );
 
         button.dataset.price =
             price;
@@ -2507,6 +2576,7 @@ currentPrice =
 
 
     updateModalFavorite();
+
 
     if (modal) {
 
@@ -2537,6 +2607,7 @@ function closeProduct() {
 
 }
 
+
 if (modalClose) {
 
     modalClose.addEventListener(
@@ -2545,6 +2616,7 @@ if (modalClose) {
     );
 
 }
+
 
 if (modalOverlay) {
 
@@ -2562,18 +2634,13 @@ if (modalOverlay) {
 
 document.addEventListener(
     "keydown",
-    (event) => {
+    event => {
 
-        if (
-            event.key === "Escape"
-        ) {
+        if (event.key === "Escape") {
 
             closeProduct();
-
             closeBag();
-
             closeSearch();
-
             closeMobileMenu();
 
         }
@@ -2593,6 +2660,8 @@ document.querySelectorAll(
     button.addEventListener(
         "click",
         () => {
+
+            if (!currentProduct) return;
 
             document.querySelectorAll(
                 ".size-btn"
@@ -2614,9 +2683,13 @@ document.querySelectorAll(
                 );
 
             currentPrice =
-                Number(
-                    button.dataset.price
+                getProductPrice(
+                    currentProduct,
+                    currentSize
                 );
+
+            button.dataset.price =
+                currentPrice;
 
             if (modalPrice) {
 
@@ -2702,7 +2775,8 @@ function toggleFavorite(id) {
 
         favorites =
             favorites.filter(
-                item => item !== id
+                item =>
+                    item !== id
             );
 
         showToast(
@@ -2734,8 +2808,12 @@ function toggleFavorite(id) {
 
 function updateModalFavorite() {
 
-    if (!currentProduct ||
-        !modalFavorite) return;
+    if (
+        !currentProduct ||
+        !modalFavorite
+    ) {
+        return;
+    }
 
     const active =
         favorites.includes(
@@ -2750,9 +2828,10 @@ function updateModalFavorite() {
     modalFavorite.innerHTML = `
 
         <i class="
-            ${active
-                ? "fa-solid"
-                : "fa-regular"
+            ${
+                active
+                    ? "fa-solid"
+                    : "fa-regular"
             }
             fa-heart
         "></i>
@@ -2849,10 +2928,10 @@ if (modalAdd) {
             const existing =
                 bag.find(
                     item =>
-                        item.id === currentProduct.id
-                        &&
+                        item.id === currentProduct.id &&
                         item.size === currentSize
                 );
+
 
             if (existing) {
 
@@ -2882,14 +2961,17 @@ if (modalAdd) {
 
             }
 
+
             updateCounters();
 
             updateBag();
+
 
             showToast(
                 "Ajouté à votre sélection",
                 `${currentProduct.name} — ${currentSize} ML`
             );
+
 
             closeProduct();
 
@@ -2906,6 +2988,7 @@ if (modalAdd) {
 function updateBag() {
 
     if (!bagItems) return;
+
 
     if (bag.length === 0) {
 
@@ -2930,6 +3013,7 @@ function updateBag() {
                 <button
                     class="btn btn-gold"
                     id="emptyBagBtn"
+                    type="button"
                 >
                     Découvrir les parfums
                 </button>
@@ -2938,10 +3022,12 @@ function updateBag() {
 
         `;
 
+
         const emptyBagBtn =
             document.getElementById(
                 "emptyBagBtn"
             );
+
 
         if (emptyBagBtn) {
 
@@ -2973,6 +3059,7 @@ function updateBag() {
 
         bagItems.innerHTML = "";
 
+
         bag.forEach(
             (item, index) => {
 
@@ -2984,15 +3071,25 @@ function updateBag() {
                 itemElement.className =
                     "bag-item";
 
+
                 const product =
                     products.find(
-                        p => p.id === item.id
+                        p =>
+                            p.id === item.id
                     );
+
 
                 const image =
                     product
                         ? getProductImage(product)
                         : "";
+
+
+                const typeLabel =
+                    product
+                        ? getProductTypeLabel(product)
+                        : "";
+
 
                 itemElement.innerHTML = `
 
@@ -3005,6 +3102,7 @@ function updateBag() {
 
                     </div>
 
+
                     <div class="bag-item-info">
 
                         <h4>
@@ -3012,19 +3110,27 @@ function updateBag() {
                         </h4>
 
                         <span>
+
+                            ${typeLabel}
+
+                            ·
+
                             ${item.size} ML
                             ×
                             ${item.quantity}
+
                         </span>
 
                         <button
                             class="bag-item-remove"
                             data-index="${index}"
+                            type="button"
                         >
                             Supprimer
                         </button>
 
                     </div>
+
 
                     <div class="bag-item-price">
 
@@ -3036,6 +3142,7 @@ function updateBag() {
                     </div>
 
                 `;
+
 
                 bagItems.appendChild(
                     itemElement
@@ -3058,7 +3165,10 @@ function updateBag() {
                             button.dataset.index
                         );
 
-                    bag.splice(index, 1);
+                    bag.splice(
+                        index,
+                        1
+                    );
 
                     updateCounters();
 
@@ -3080,6 +3190,7 @@ function updateBag() {
                 item.quantity,
             0
         );
+
 
     if (bagTotal) {
 
@@ -3146,6 +3257,7 @@ function closeBag() {
 const bagBtn =
     document.getElementById("bagBtn");
 
+
 if (bagBtn) {
 
     bagBtn.addEventListener(
@@ -3158,6 +3270,7 @@ if (bagBtn) {
 
 const drawerClose =
     document.getElementById("drawerClose");
+
 
 if (drawerClose) {
 
@@ -3187,12 +3300,18 @@ function sendWhatsAppOrder() {
 
     if (!WHATSAPP_NUMBER) return;
 
+
     let message =
         "Bonjour ÉLIXIR 👋\n\n";
+
 
     message +=
         "Je souhaite commander :\n\n";
 
+
+    /* ================================================
+       COMMANDE DEPUIS LA FICHE PRODUIT
+    ================================================= */
 
     if (
         currentProduct &&
@@ -3207,15 +3326,27 @@ function sendWhatsAppOrder() {
             `Référence : ${currentProduct.catalogue}\n`;
 
         message +=
+            `Type : ${getProductTypeLabel(currentProduct)}\n`;
+
+        message +=
             `Format : ${currentSize} ML\n`;
 
         message +=
             `Quantité : ${quantity}\n`;
 
         message +=
-            `Prix : ${currentPrice * quantity} DH\n\n`;
+            `Prix unitaire : ${currentPrice} DH\n`;
 
-    } else {
+        message +=
+            `Total : ${currentPrice * quantity} DH\n\n`;
+
+    }
+
+    /* ================================================
+       COMMANDE DEPUIS LE PANIER
+    ================================================= */
+
+    else {
 
         if (bag.length === 0) {
 
@@ -3228,23 +3359,34 @@ function sendWhatsAppOrder() {
 
                 const product =
                     products.find(
-                        p => p.id === item.id
+                        p =>
+                            p.id === item.id
                     );
+
 
                 message +=
                     `• ${item.name}`;
+
 
                 if (product) {
 
                     message +=
                         ` — Réf. ${product.catalogue}`;
 
+                    message +=
+                        ` — ${getProductTypeLabel(product)}`;
+
                 }
 
+
                 message +=
-                    ` — ${item.size} ML × ${item.quantity} — ${item.price * item.quantity} DH\n`;
+                    ` — ${item.size} ML × ${item.quantity}`;
+
+                message +=
+                    ` — ${item.price * item.quantity} DH\n`;
 
             });
+
 
             const total =
                 bag.reduce(
@@ -3254,6 +3396,7 @@ function sendWhatsAppOrder() {
                         item.quantity,
                     0
                 );
+
 
             message +=
                 `\nTotal estimé : ${total} DH`;
@@ -3265,6 +3408,7 @@ function sendWhatsAppOrder() {
 
     const url =
         `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
 
     window.open(
         url,
@@ -3283,6 +3427,7 @@ const whatsappOrder =
         "whatsappOrder"
     );
 
+
 if (whatsappOrder) {
 
     whatsappOrder.addEventListener(
@@ -3297,6 +3442,7 @@ const drawerWhatsapp =
     document.getElementById(
         "drawerWhatsapp"
     );
+
 
 if (drawerWhatsapp) {
 
@@ -3322,27 +3468,44 @@ function showToast(
 
     if (!toast) return;
 
+
     const strong =
         toast.querySelector(
             "strong"
         );
+
 
     const span =
         toast.querySelector(
             "span"
         );
 
-    if (strong)
+
+    if (strong) {
+
         strong.textContent =
             title;
 
-    if (span)
+    }
+
+
+    if (span) {
+
         span.textContent =
             message;
 
-    toast.classList.add("show");
+    }
 
-    clearTimeout(toastTimer);
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        toastTimer
+    );
+
 
     toastTimer =
         setTimeout(
@@ -3398,13 +3561,16 @@ function openSearch() {
 
     if (!searchPanel) return;
 
+
     searchPanel.classList.add(
         "open"
     );
 
+
     document.body.classList.add(
         "modal-open"
     );
+
 
     setTimeout(
         () => {
@@ -3426,19 +3592,23 @@ function closeSearch() {
 
     if (!searchPanel) return;
 
+
     searchPanel.classList.remove(
         "open"
     );
 
+
     document.body.classList.remove(
         "modal-open"
     );
+
 
     if (searchInput) {
 
         searchInput.value = "";
 
     }
+
 
     if (searchResults) {
 
@@ -3459,6 +3629,7 @@ if (searchInput) {
                 searchInput.value
                     .trim()
                     .toLowerCase();
+
 
             if (!query) {
 
@@ -3484,8 +3655,10 @@ if (searchInput) {
                             ${product.top}
                             ${product.heart}
                             ${product.base}
+                            ${getProductTypeLabel(product)}
                             `
                             .toLowerCase();
+
 
                         return content.includes(
                             query
@@ -3532,9 +3705,23 @@ if (searchInput) {
                             </span>
 
                             <small>
+
                                 Réf. ${product.catalogue}
+
                                 ·
+
                                 ${product.categoryLabel}
+
+                                ·
+
+                                ${getProductTypeLabel(product)}
+
+                                ·
+
+                                À partir de
+                                ${getProductPrice(product, 30)}
+                                DH
+
                             </small>
 
                         </div>
@@ -3588,9 +3775,11 @@ function openMobileMenu() {
 
     if (!mobileMenu) return;
 
+
     mobileMenu.classList.add(
         "open"
     );
+
 
     document.body.classList.add(
         "menu-open"
@@ -3603,9 +3792,11 @@ function closeMobileMenu() {
 
     if (!mobileMenu) return;
 
+
     mobileMenu.classList.remove(
         "open"
     );
+
 
     document.body.classList.remove(
         "menu-open"
@@ -3681,7 +3872,7 @@ if (
 
             },
             {
-                threshold: .12
+                threshold: 0.12
             }
         );
 
@@ -3726,6 +3917,7 @@ document.querySelectorAll(
                     "href"
                 );
 
+
             if (
                 targetId === "#"
             ) {
@@ -3734,14 +3926,18 @@ document.querySelectorAll(
 
             }
 
+
             const target =
                 document.querySelector(
                     targetId
                 );
 
+
             if (!target) return;
 
+
             event.preventDefault();
+
 
             target.scrollIntoView({
                 behavior: "smooth"
@@ -3764,10 +3960,12 @@ window.addEventListener(
         const scroll =
             window.scrollY;
 
+
         const heroBottle =
             document.querySelector(
                 ".hero-bottle"
             );
+
 
         if (
             heroBottle &&
@@ -3775,7 +3973,7 @@ window.addEventListener(
         ) {
 
             heroBottle.style.transform =
-                `translateY(${scroll * .08}px)`;
+                `translateY(${scroll * 0.08}px)`;
 
         }
 
@@ -3825,4 +4023,12 @@ console.log(
 
 console.log(
     "44 parfums FEMME + 44 parfums HOMME"
+);
+
+console.log(
+    "Tarifs EDP : 30ml 50 DH · 50ml 70 DH · 100ml 120 DH"
+);
+
+console.log(
+    "Tarifs Extrait : 30ml 150 DH · 50ml 170 DH · 100ml 320 DH"
 );
