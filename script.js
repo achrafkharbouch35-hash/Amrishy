@@ -1874,10 +1874,6 @@ function renderPackCard(pack) {
 
                 <div class="product-card-bottom">
 
-                    <div class="product-price">
-                        <strong>${pack.price} DH</strong>
-                    </div>
-
                     <button
                         class="product-view-btn"
                         data-open-pack="${escapeHTML(pack.id)}"
