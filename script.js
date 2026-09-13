@@ -2070,37 +2070,17 @@ if (cursor && follower) {
 function bottleHTML(product) {
 
     return `
+        <div class="real-product-image">
 
-        <div class="product-bottle">
-
-            <div class="product-cap"></div>
-
-            <div class="product-neck"></div>
-
-            <div class="product-body">
-
-                <img
-                    src="${getProductImage(product)}"
-                    alt="${product.name}"
-                    class="perfume-image"
-                    loading="lazy"
-                    onerror="this.style.display='none';"
-                >
-
-                <div class="product-label">
-
-                    <small>ÉLIXIR</small>
-
-                    <strong>
-                        ${product.shortName}
-                    </strong>
-
-                </div>
-
-            </div>
+            <img
+                src="${getProductImage(product)}"
+                alt="${product.name}"
+                loading="lazy"
+                class="perfume-image"
+                onerror="this.onerror=null; this.src='';"
+            >
 
         </div>
-
     `;
 
 }
