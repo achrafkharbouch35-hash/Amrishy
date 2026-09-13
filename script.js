@@ -416,7 +416,7 @@ const products = [
         shortName: "TAJ",
         category: "femme",
         categoryLabel: "FEMME",
-        image: "escada-taj-2.jpg",
+        image: "escada-taj.jpg",
         tagline: "Une évasion exotique.",
         description: "Une seconde référence Escada Taj présente dans votre catalogue.",
         top: "Fruits exotiques",
