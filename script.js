@@ -1801,9 +1801,6 @@ const products = [
         price: 200,
         badge: "BEST-SELLER",
         packType: "three",
-        selectionCount: 3,
-        extraitCount: 1,
-        eauCount: 2
     },
 
     {
@@ -1818,9 +1815,6 @@ const products = [
         price: 400,
         badge: "MEILLEURE OFFRE",
         packType: "six",
-        selectionCount: 6,
-        extraitCount: 2,
-        eauCount: 4
     }
 ];
 
