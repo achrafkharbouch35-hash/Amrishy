@@ -1,5 +1,5 @@
 /* =====================================================
-   ÉLIXIR — MAISON DE PARFUMS
+   AMRISHY — MAISON DE PARFUMS
    SCRIPT.JS
    88 PARFUMS — 44 FEMME + 44 HOMME
 ===================================================== */
@@ -1815,7 +1815,7 @@ let favorites = [];
 
 
 /* =====================================================
-   TARIFS ÉLIXIR
+   TARIFS AMRISHY
 ===================================================== */
 
 const PRICES = {
@@ -3302,7 +3302,7 @@ function sendWhatsAppOrder() {
 
 
     let message =
-        "Bonjour ÉLIXIR 👋\n\n";
+        "Bonjour ACHRAF 👋\n\n";
 
 
     message +=
@@ -4009,7 +4009,7 @@ document.addEventListener(
 ===================================================== */
 
 console.log(
-    "%cÉLIXIR — Maison de Parfums",
+    "%cAMRISHY — Maison de Parfums",
     `
         color:#d6ad63;
         font-size:20px;
