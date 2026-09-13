@@ -2758,27 +2758,56 @@ function updateCounters() {
 const modalAdd =
     document.getElementById("modalAdd");
 
-
 if (modalAdd) {
 
     modalAdd.addEventListener(
         "click",
-        () => {
+        function (event) {
 
-            if (!currentProduct) return;
+            event.preventDefault();
+            event.stopPropagation();
+
+            /* Vérification produit */
+
+            if (!currentProduct) {
+
+                console.warn(
+                    "ÉLIXIR : aucun produit sélectionné."
+                );
+
+                return;
+            }
+
+
+            /* Vérification des valeurs */
+
+            const selectedSize =
+                Number(currentSize) || 50;
+
+            const selectedPrice =
+                Number(currentPrice) || 0;
+
+            const selectedQuantity =
+                Number(quantity) || 1;
+
+
+            /* Cherche si le même parfum
+               et le même format existent déjà */
 
             const existing =
                 bag.find(
                     item =>
-                        item.id === currentProduct.id
-                        &&
-                        item.size === currentSize
+                        item.id === currentProduct.id &&
+                        Number(item.size) === selectedSize
                 );
+
+
+            /* Ajout ou augmentation */
 
             if (existing) {
 
                 existing.quantity +=
-                    quantity;
+                    selectedQuantity;
 
             } else {
 
@@ -2791,26 +2820,35 @@ if (modalAdd) {
                         currentProduct.name,
 
                     size:
-                        currentSize,
+                        selectedSize,
 
                     price:
-                        currentPrice,
+                        selectedPrice,
 
                     quantity:
-                        quantity
+                        selectedQuantity
 
                 });
 
             }
 
+
+            /* Mise à jour */
+
             updateCounters();
 
             updateBag();
 
+
+            /* Message */
+
             showToast(
                 "Ajouté à votre sélection",
-                `${currentProduct.name} — ${currentSize} ML`
+                `${currentProduct.name} — ${selectedSize} ML`
             );
+
+
+            /* Fermer le produit */
 
             closeProduct();
 
@@ -2819,6 +2857,27 @@ if (modalAdd) {
 
 }
 
+   /* =====================================================
+   FIX — EMPÊCHER LE CLIC DE REMONTER VERS LA CARTE
+===================================================== */
+
+if (modalAdd) {
+
+    modalAdd.addEventListener(
+        "mousedown",
+        function (event) {
+            event.stopPropagation();
+        }
+    );
+
+    modalAdd.addEventListener(
+        "pointerdown",
+        function (event) {
+            event.stopPropagation();
+        }
+    );
+
+}
 
 /* =====================================================
    UPDATE BAG
