@@ -8,20 +8,15 @@
 
     <meta
         name="description"
-        content="ÉLIXIR — Maison de parfums d'exception pour homme, femme."
+        content="ÉLIXIR — Maison de parfums d'exception pour homme, femme et unisexe."
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
         rel="stylesheet"
-    >
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
     <link rel="stylesheet" href="style.css">
@@ -29,899 +24,898 @@
 
 <body>
 
-<!-- =====================================================
-     LOADER
-===================================================== -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-<div class="loader" id="loader">
-    <div class="loader-content">
-        <div class="loader-logo">ÉLIXIR</div>
-        <div class="loader-line">
-            <span></span>
-        </div>
-        <p>MAISON DE PARFUMS</p>
-    </div>
-</div>
+    <header class="site-header">
 
+        <div class="header-inner">
 
-<!-- =====================================================
-     CURSOR
-===================================================== -->
-
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-
-
-<!-- =====================================================
-     BACKGROUND EFFECTS
-===================================================== -->
-
-<div class="background-effects">
-    <div class="gold-orb orb-1"></div>
-    <div class="gold-orb orb-2"></div>
-    <div class="gold-orb orb-3"></div>
-</div>
-
-<div class="particles" id="particles"></div>
-
-
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
-
-<header class="navbar" id="navbar">
-
-    <a href="#home" class="logo">
-        <span>ÉLIXIR</span>
-        <small>MAISON DE PARFUMS</small>
-    </a>
-
-    <nav class="nav-links">
-
-        <a href="#home">Accueil</a>
-        <a href="#collection">Collection</a>
-        <a href="#univers">L'univers</a>
-        <a href="#contact">Contact</a>
-
-    </nav>
-
-    <div class="nav-actions">
-
-        <button class="nav-icon" id="searchBtn" aria-label="Recherche">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-
-        <button class="nav-icon" id="favoritesBtn" aria-label="Favoris">
-            <i class="fa-regular fa-heart"></i>
-            <span class="counter" id="favoritesCount">0</span>
-        </button>
-
-        <button class="nav-icon" id="bagBtn" aria-label="Sélection">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span class="counter" id="bagCount">0</span>
-        </button>
-
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-    </div>
-
-</header>
-
-
-<!-- =====================================================
-     MOBILE MENU
-===================================================== -->
-
-<div class="mobile-menu" id="mobileMenu">
-
-    <button class="mobile-close" id="mobileClose">
-        <i class="fa-solid fa-xmark"></i>
-    </button>
-
-    <div class="mobile-menu-logo">
-        ÉLIXIR
-        <span>MAISON DE PARFUMS</span>
-    </div>
-
-    <nav>
-        <a href="#home">Accueil</a>
-        <a href="#collection">Collection</a>
-        <a href="#univers">L'univers</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-</div>
-
-
-<!-- =====================================================
-     SEARCH PANEL
-===================================================== -->
-
-<div class="search-panel" id="searchPanel">
-
-    <button class="panel-close" id="searchClose">
-        <i class="fa-solid fa-xmark"></i>
-    </button>
-
-    <div class="search-inner">
-
-        <span>RECHERCHER</span>
-
-        <div class="search-input-wrapper">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Nom du parfum, note, collection..."
-            >
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-        </div>
-
-        <div class="search-results" id="searchResults"></div>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<main>
-
-<section class="hero" id="home">
-
-    <div class="hero-grid"></div>
-
-    <div class="hero-content">
-
-        <div class="eyebrow">
-            <span></span>
-            L'ART DE LA FRAGRANCE
-            <span></span>
-        </div>
-
-        <h1>
-            Laissez une
-            <em>empreinte.</em>
-        </h1>
-
-        <p class="hero-description">
-            Des parfums d'exception imaginés pour celles et ceux
-            qui veulent être remarqués sans jamais avoir à parler.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#collection" class="btn btn-gold">
-                <span>Découvrir la collection</span>
-                <i class="fa-solid fa-arrow-right"></i>
+            <a href="#" class="logo">
+                <span class="logo-main">ÉLIXIR</span>
+                <span class="logo-sub">MAISON DE PARFUMS</span>
             </a>
 
-            <a href="#univers" class="btn btn-outline">
-                <span>Notre univers</span>
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- HERO PERFUME -->
-
-    <div class="hero-perfume">
-
-        <div class="hero-glow"></div>
-
-        <div class="floating-card card-top">
-            <span>EXTRAIT</span>
-            <strong>30%</strong>
-        </div>
-
-        <div class="perfume-bottle hero-bottle">
-
-            <div class="bottle-cap">
-                <div class="cap-top"></div>
-            </div>
-
-            <div class="bottle-neck"></div>
-
-            <div class="bottle-body">
-
-                <div class="bottle-reflection"></div>
-
-                <div class="bottle-label">
-                    <small>ÉLIXIR</small>
-                    <strong>NOIR</strong>
-                    <span>PARFUM D'EXCEPTION</span>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="floating-card card-bottom">
-            <span>100 ML</span>
-            <strong>EDP</strong>
-        </div>
-
-    </div>
-
-
-    <div class="hero-scroll">
-        <span>SCROLL</span>
-        <div class="scroll-line"></div>
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     MARQUE STRIP
-===================================================== -->
-
-<section class="marquee-section">
-
-    <div class="marquee">
-
-        <div class="marquee-content">
-
-            <span>PARFUMS D'EXCEPTION</span>
-            <i class="fa-solid fa-star"></i>
-
-            <span>ARTISANAT</span>
-            <i class="fa-solid fa-star"></i>
-
-            <span>ÉLÉGANCE</span>
-            <i class="fa-solid fa-star"></i>
-
-            <span>CARACTÈRE</span>
-            <i class="fa-solid fa-star"></i>
-
-            <span>PARFUMS D'EXCEPTION</span>
-            <i class="fa-solid fa-star"></i>
-
-            <span>ARTISANAT</span>
-            <i class="fa-solid fa-star"></i>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     COLLECTION
-===================================================== -->
-
-<section class="collection section" id="collection">
-
-    <div class="section-header reveal">
-
-        <div>
-            <span class="section-kicker">LA COLLECTION</span>
-
-            <h2>
-                Trouvez votre
-                <em>signature.</em>
-            </h2>
-        </div>
-
-        <p>
-            Une sélection de fragrances conçues autour de matières
-            premières précieuses et de compositions contemporaines.
-        </p>
-
-    </div>
-
-
-    <!-- FILTERS -->
-
-    <div class="collection-controls reveal">
-
-        <div class="filter-tabs">
-
-            <button class="filter-btn active" data-filter="all">
-                Tous
-            </button>
-
-            <button class="filter-btn" data-filter="homme">
-                Homme
-            </button>
-
-            <button class="filter-btn" data-filter="femme">
-                Femme
-            </button>
-
-        </div>
-
-        <div class="collection-count">
-            <span id="productCount">88</span>
-            FRAGRANCES
-        </div>
-
-    </div>
-
-
-    <!-- PRODUCTS -->
-
-    <div class="products-grid" id="productsGrid"></div>
-
-</section>
-
-
-<!-- =====================================================
-     FEATURED EXPERIENCE
-===================================================== -->
-
-<section class="experience section" id="univers">
-
-    <div class="experience-image reveal">
-
-        <div class="experience-bottle">
-
-            <div class="exp-cap"></div>
-            <div class="exp-neck"></div>
-
-            <div class="exp-body">
-
-                <div class="exp-label">
-                    <small>ÉLIXIR</small>
-                    <strong>AMBRE</strong>
-                    <span>COLLECTION PRIVÉE</span>
-                </div>
+            <nav class="main-nav">
+
+                <a href="#accueil">Accueil</a>
+
+                <a href="#collection">Collection</a>
+
+                <a href="#homme">Homme</a>
+
+                <a href="#femme">Femme</a>
+
+                <a href="#apropos">À propos</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <button
+                    type="button"
+                    class="icon-button"
+                    id="searchToggle"
+                    aria-label="Rechercher"
+                >
+                    🔍
+                </button>
+
+                <button
+                    type="button"
+                    class="icon-button"
+                    id="favoritesToggle"
+                    aria-label="Favoris"
+                >
+                    ♡
+                    <span id="favoritesCount">0</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="icon-button"
+                    id="cartToggle"
+                    aria-label="Panier"
+                >
+                    🛍
+                    <span id="cartCount">0</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="mobile-menu-button"
+                    id="mobileMenuToggle"
+                    aria-label="Menu"
+                >
+                    ☰
+                </button>
 
             </div>
 
         </div>
 
-        <div class="experience-ring ring-one"></div>
-        <div class="experience-ring ring-two"></div>
-
-    </div>
-
-
-    <div class="experience-content reveal">
-
-        <span class="section-kicker">
-            L'UNIVERS ÉLIXIR
-        </span>
-
-        <h2>
-            Plus qu'un parfum.
-            <em>Une présence.</em>
-        </h2>
-
-        <p>
-            Chaque création ÉLIXIR raconte une histoire. Une rencontre
-            entre des matières nobles, des accords inattendus et une
-            vision moderne de la parfumerie.
-        </p>
-
-        <p>
-            Nos fragrances sont pensées pour évoluer sur la peau,
-            révéler différentes facettes et laisser derrière vous
-            une signature mémorable.
-        </p>
-
-        <div class="experience-stats">
-
-            <div>
-                <strong>06</strong>
-                <span>Fragrances</span>
-            </div>
-
-            <div>
-                <strong>30%</strong>
-                <span>Concentration</span>
-            </div>
-
-            <div>
-                <strong>24H</strong>
-                <span>Signature</span>
-            </div>
-
-        </div>
-
-        <a href="#collection" class="text-link">
-            Explorer les fragrances
-            <i class="fa-solid fa-arrow-right"></i>
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     NOTES SECTION
-===================================================== -->
-
-<section class="notes-section section">
-
-    <div class="notes-header reveal">
-
-        <span class="section-kicker">
-            L'ALCHIMIE DES SENS
-        </span>
-
-        <h2>
-            Des notes qui
-            <em>racontent.</em>
-        </h2>
-
-    </div>
-
-    <div class="notes-grid">
-
-        <div class="note-card reveal">
-
-            <div class="note-icon">
-                <i class="fa-solid fa-leaf"></i>
-            </div>
-
-            <span>01</span>
-
-            <h3>Notes de tête</h3>
-
-            <p>
-                La première impression. Fraîches, lumineuses et
-                immédiatement captivantes.
-            </p>
-
-        </div>
-
-
-        <div class="note-card reveal">
-
-            <div class="note-icon">
-                <i class="fa-solid fa-spa"></i>
-            </div>
-
-            <span>02</span>
-
-            <h3>Notes de cœur</h3>
-
-            <p>
-                Le cœur de la fragrance. Floral, épicé ou fruité,
-                il révèle sa véritable personnalité.
-            </p>
-
-        </div>
-
-
-        <div class="note-card reveal">
-
-            <div class="note-icon">
-                <i class="fa-solid fa-tree"></i>
-            </div>
-
-            <span>03</span>
-
-            <h3>Notes de fond</h3>
-
-            <p>
-                La trace laissée sur la peau. Bois, muscs,
-                ambre et matières profondes.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section class="cta-section">
-
-    <div class="cta-decoration"></div>
-
-    <div class="cta-content reveal">
-
-        <span class="section-kicker">
-            VOTRE PROCHAINE SIGNATURE
-        </span>
-
-        <h2>
-            Quel parfum
-            <em>vous ressemble ?</em>
-        </h2>
-
-        <p>
-            Explorez notre collection et trouvez la fragrance
-            qui deviendra votre signature.
-        </p>
-
-        <a href="#collection" class="btn btn-gold">
-            <span>Explorer la collection</span>
-            <i class="fa-solid fa-arrow-right"></i>
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer id="contact">
-
-    <div class="footer-main">
-
-        <div class="footer-brand">
-
-            <a href="#home" class="logo">
-                <span>ÉLIXIR</span>
-                <small>MAISON DE PARFUMS</small>
-            </a>
-
-            <p>
-                L'art de créer des fragrances qui ne s'oublient pas.
-            </p>
-
-            <div class="socials">
-
-                <a href="#" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="#" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-
-                <a href="#" aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
+        <!-- SEARCH -->
+
+        <div class="search-panel" id="searchPanel">
+
+            <div class="search-inner">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Rechercher un parfum..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="searchClose"
+                    class="search-close"
+                >
+                    ×
+                </button>
 
             </div>
 
         </div>
 
+        <!-- MOBILE MENU -->
 
-        <div class="footer-column">
+        <div class="mobile-menu" id="mobileMenu">
 
-            <h4>Navigation</h4>
-
-            <a href="#home">Accueil</a>
+            <a href="#accueil">Accueil</a>
             <a href="#collection">Collection</a>
-            <a href="#univers">Notre univers</a>
+            <a href="#homme">Homme</a>
+            <a href="#femme">Femme</a>
+            <a href="#apropos">À propos</a>
             <a href="#contact">Contact</a>
 
         </div>
 
-
-        <div class="footer-column">
-
-            <h4>Collections</h4>
-
-            <a href="#collection">Homme</a>
-            <a href="#collection">Femme</a>
-
-        </div>
+    </header>
 
 
-        <div class="footer-column">
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-            <h4>Contact</h4>
+    <main>
 
-            <a href="tel:+212600000000">
-                +212 6 00 00 00 00
-            </a>
+        <section class="hero" id="accueil">
 
-            <a href="mailto:contact@elixir.ma">
-                contact@elixir.ma
-            </a>
+            <div class="hero-overlay"></div>
 
-            <span>Maroc</span>
+            <div class="hero-content">
 
-        </div>
+                <p class="eyebrow">
+                    MAISON DE PARFUMS
+                </p>
 
-    </div>
+                <h1>
+                    L'art de<br>
+                    <span>se distinguer</span>
+                </h1>
+
+                <p class="hero-text">
+                    Des fragrances d'exception pensées pour révéler
+                    votre personnalité et laisser une empreinte
+                    inoubliable.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#collection"
+                        class="btn btn-primary"
+                    >
+                        Découvrir la collection
+                    </a>
+
+                    <a
+                        href="#apropos"
+                        class="btn btn-outline"
+                    >
+                        Notre histoire
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
-    <div class="footer-bottom">
+        <!-- =================================================
+             INTRO
+        ================================================== -->
 
-        <span>
-            © 2026 ÉLIXIR — Tous droits réservés.
-        </span>
+        <section class="intro-section">
 
-        <span>
-            Maison de parfums
-        </span>
+            <div class="container">
 
-    </div>
+                <p class="eyebrow">
+                    L'EXCELLENCE ÉLIXIR
+                </p>
 
-</footer>
+                <h2>
+                    Une signature olfactive<br>
+                    <em>unique</em>
+                </h2>
 
-</main>
+                <p class="intro-text">
+                    Chez ÉLIXIR, chaque parfum est une invitation
+                    au voyage. Des matières soigneusement choisies,
+                    des compositions élégantes et une attention
+                    particulière portée à chaque détail.
+                </p>
+
+            </div>
+
+        </section>
 
 
-<!-- =====================================================
-     PRODUCT MODAL
-===================================================== -->
+        <!-- =================================================
+             COLLECTION
+        ================================================== -->
 
-<div class="product-modal" id="productModal">
-
-    <div class="modal-overlay" id="modalOverlay"></div>
-
-    <div class="modal-container">
-
-       <div class="modal-product-image">
-
-    <div class="modal-real-image">
-
-        <img
-            id="modalProductImage"
-            src=""
-            alt=""
+        <section
+            class="collection-section"
+            id="collection"
         >
 
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            NOS FRAGRANCES
+                        </p>
+
+                        <h2>
+                            La collection
+                        </h2>
+
+                    </div>
+
+                    <div class="collection-filters">
+
+                        <button
+                            type="button"
+                            class="filter-btn active"
+                            data-filter="all"
+                        >
+                            Tous
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="homme"
+                        >
+                            Homme
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="femme"
+                        >
+                            Femme
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH RESULTS -->
+
+                <div
+                    id="searchResults"
+                    class="search-results"
+                ></div>
+
+
+                <!-- PRODUCTS -->
+
+                <div
+                    id="productsGrid"
+                    class="products-grid"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HOMME
+        ================================================== -->
+
+        <section
+            class="category-banner category-men"
+            id="homme"
+        >
+
+            <div class="category-banner-content">
+
+                <p class="eyebrow">
+                    POUR LUI
+                </p>
+
+                <h2>
+                    Collection Homme
+                </h2>
+
+                <p>
+                    Puissance, caractère et élégance.
+                </p>
+
+                <button
+                    type="button"
+                    class="btn btn-outline category-filter"
+                    data-category="homme"
+                >
+                    Découvrir les parfums homme
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FEMME
+        ================================================== -->
+
+        <section
+            class="category-banner category-women"
+            id="femme"
+        >
+
+            <div class="category-banner-content">
+
+                <p class="eyebrow">
+                    POUR ELLE
+                </p>
+
+                <h2>
+                    Collection Femme
+                </h2>
+
+                <p>
+                    Féminité, sensualité et sophistication.
+                </p>
+
+                <button
+                    type="button"
+                    class="btn btn-outline category-filter"
+                    data-category="femme"
+                >
+                    Découvrir les parfums femme
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            class="about-section"
+            id="apropos"
+        >
+
+            <div class="container about-grid">
+
+                <div class="about-content">
+
+                    <p class="eyebrow">
+                        NOTRE MAISON
+                    </p>
+
+                    <h2>
+                        L'essence<br>
+                        de <em>l'élégance</em>
+                    </h2>
+
+                    <p>
+                        ÉLIXIR est née d'une passion pour l'art
+                        de la parfumerie et d'une volonté simple :
+                        créer des fragrances capables de raconter
+                        une histoire.
+                    </p>
+
+                    <p>
+                        Chaque création est pensée comme une
+                        signature personnelle. Un équilibre entre
+                        tradition, modernité et caractère.
+                    </p>
+
+                    <div class="about-signature">
+                        ÉLIXIR
+                    </div>
+
+                </div>
+
+                <div class="about-visual">
+
+                    <div class="about-card">
+
+                        <span class="about-card-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Matières<br>
+                            précieuses
+                        </h3>
+
+                    </div>
+
+                    <div class="about-card">
+
+                        <span class="about-card-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Créations<br>
+                            uniques
+                        </h3>
+
+                    </div>
+
+                    <div class="about-card">
+
+                        <span class="about-card-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Signature<br>
+                            intemporelle
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SERVICES
+        ================================================== -->
+
+        <section class="services-section">
+
+            <div class="container">
+
+                <div class="services-grid">
+
+                    <div class="service-item">
+
+                        <div class="service-icon">
+                            ✦
+                        </div>
+
+                        <h3>
+                            Qualité
+                        </h3>
+
+                        <p>
+                            Des fragrances sélectionnées avec
+                            exigence.
+                        </p>
+
+                    </div>
+
+                    <div class="service-item">
+
+                        <div class="service-icon">
+                            ◇
+                        </div>
+
+                        <h3>
+                            Élégance
+                        </h3>
+
+                        <p>
+                            Des compositions pensées pour durer.
+                        </p>
+
+                    </div>
+
+                    <div class="service-item">
+
+                        <div class="service-icon">
+                            ♡
+                        </div>
+
+                        <h3>
+                            Passion
+                        </h3>
+
+                        <p>
+                            Une maison créée par amour du parfum.
+                        </p>
+
+                    </div>
+
+                    <div class="service-item">
+
+                        <div class="service-icon">
+                            ✧
+                        </div>
+
+                        <h3>
+                            Conseil
+                        </h3>
+
+                        <p>
+                            Nous vous aidons à trouver votre
+                            signature.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <section
+            class="contact-section"
+            id="contact"
+        >
+
+            <div class="container contact-grid">
+
+                <div class="contact-content">
+
+                    <p class="eyebrow">
+                        CONTACT
+                    </p>
+
+                    <h2>
+                        Trouvez votre<br>
+                        <em>signature</em>
+                    </h2>
+
+                    <p>
+                        Une question sur une fragrance ?
+                        Besoin d'un conseil ?
+                        Notre équipe est à votre écoute.
+                    </p>
+
+                    <div class="contact-info">
+
+                        <div>
+                            <span>WhatsApp</span>
+                            <strong id="contactWhatsapp">
+                                Contactez-nous
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>Instagram</span>
+                            <strong>
+                                @elixir.parfums
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form-wrapper">
+
+                    <form
+                        id="contactForm"
+                        class="contact-form"
+                    >
+
+                        <div class="form-group">
+
+                            <label for="contactName">
+                                Nom
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                name="name"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="contactPhone">
+                                Téléphone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="contactPhone"
+                                name="phone"
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="contactMessage">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="contactMessage"
+                                name="message"
+                                rows="5"
+                                required
+                            ></textarea>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Envoyer sur WhatsApp
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <div class="logo">
+
+                        <span class="logo-main">
+                            ÉLIXIR
+                        </span>
+
+                        <span class="logo-sub">
+                            MAISON DE PARFUMS
+                        </span>
+
+                    </div>
+
+                    <p>
+                        L'élégance en essence.
+                    </p>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <h4>
+                        Navigation
+                    </h4>
+
+                    <a href="#accueil">
+                        Accueil
+                    </a>
+
+                    <a href="#collection">
+                        Collection
+                    </a>
+
+                    <a href="#apropos">
+                        À propos
+                    </a>
+
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <h4>
+                        Collections
+                    </h4>
+
+                    <a href="#homme">
+                        Homme
+                    </a>
+
+                    <a href="#femme">
+                        Femme
+                    </a>
+
+                    <a href="#collection">
+                        Tous les parfums
+                    </a>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <h4>
+                        Suivez-nous
+                    </h4>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Facebook
+                    </a>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 ÉLIXIR — Maison de Parfums.
+                    Tous droits réservés.
+                </p>
+
+                <p>
+                    Créé avec passion.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         PRODUCT MODAL
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="productModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay" data-close-modal></div>
+
+        <div class="modal-content">
+
+            <button
+                type="button"
+                class="modal-close"
+                data-close-modal
+                aria-label="Fermer"
+            >
+                ×
+            </button>
+
+            <div id="productModalContent"></div>
+
+        </div>
+
     </div>
 
-</div>
 
+    <!-- =====================================================
+         CART DRAWER
+    ====================================================== -->
 
-        <div class="modal-product-info">
+    <aside
+        class="side-drawer"
+        id="cartDrawer"
+    >
 
-            <span class="modal-category" id="modalCategory">
-                HOMME
-            </span>
+        <div class="drawer-header">
 
-            <h2 id="modalTitle">
-                Noir Élégance
+            <h2>
+                Votre panier
             </h2>
 
-            <p class="modal-tagline" id="modalTagline">
-                L'obscurité devient lumière.
-            </p>
+            <button
+                type="button"
+                class="drawer-close"
+                id="cartClose"
+            >
+                ×
+            </button>
 
+        </div>
 
-            <div class="modal-price">
+        <div
+            class="drawer-body"
+            id="cartItems"
+        ></div>
 
-                <strong id="modalPrice">
-                    790 DH
+        <div class="drawer-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    0 DH
                 </strong>
 
-                <span>Eau de parfum</span>
-
             </div>
 
-
-            <p class="modal-description" id="modalDescription">
-                Une fragrance intense et mystérieuse.
-            </p>
-
-
-            <!-- NOTES -->
-
-            <div class="modal-notes">
-
-                <div class="modal-note">
-
-                    <span>TOP</span>
-
-                    <strong id="modalTop">
-                        Bergamote
-                    </strong>
-
-                </div>
-
-                <div class="modal-note">
-
-                    <span>COEUR</span>
-
-                    <strong id="modalHeart">
-                        Iris
-                    </strong>
-
-                </div>
-
-                <div class="modal-note">
-
-                    <span>FOND</span>
-
-                    <strong id="modalBase">
-                        Oud
-                    </strong>
-
-                </div>
-
-            </div>
-
-
-            <!-- SIZE -->
-
-            <div class="size-section">
-
-                <span class="option-label">
-                    FORMAT
-                </span>
-
-                <div class="size-options">
-
-                    <button class="size-btn" data-size="30" data-price="490">
-                        <span>30 ML</span>
-                        <strong>490 DH</strong>
-                    </button>
-
-                    <button class="size-btn active" data-size="50" data-price="640">
-                        <span>50 ML</span>
-                        <strong>640 DH</strong>
-                    </button>
-
-                    <button class="size-btn" data-size="100" data-price="790">
-                        <span>100 ML</span>
-                        <strong>790 DH</strong>
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- QUANTITY -->
-
-            <div class="quantity-section">
-
-                <span class="option-label">
-                    QUANTITÉ
-                </span>
-
-                <div class="quantity">
-
-                    <button id="minusQty">
-                        <i class="fa-solid fa-minus"></i>
-                    </button>
-
-                    <span id="quantityValue">1</span>
-
-                    <button id="plusQty">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <div class="modal-actions">
-
-                <button class="modal-add" id="modalAdd">
-
-                    <i class="fa-solid fa-bag-shopping"></i>
-
-                    <span>
-                        Ajouter à ma sélection
-                    </span>
-
-                </button>
-
-                <button class="modal-favorite" id="modalFavorite">
-
-                    <i class="fa-regular fa-heart"></i>
-
-                </button>
-
-            </div>
-
-
-            <button class="whatsapp-order" id="whatsappOrder">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
+            <button
+                type="button"
+                class="btn btn-primary btn-full"
+                id="whatsappOrder"
+            >
                 Commander sur WhatsApp
-
             </button>
 
         </div>
 
-    </div>
-
-</div>
+    </aside>
 
 
-<!-- =====================================================
-     BAG DRAWER
-===================================================== -->
+    <!-- =====================================================
+         FAVORITES DRAWER
+    ====================================================== -->
 
-<div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside
+        class="side-drawer"
+        id="favoritesDrawer"
+    >
 
-<aside class="bag-drawer" id="bagDrawer">
+        <div class="drawer-header">
 
-    <div class="drawer-header">
+            <h2>
+                Mes favoris
+            </h2>
 
-        <div>
-            <span>MA SÉLECTION</span>
-            <h3>Vos parfums</h3>
-        </div>
-
-        <button id="drawerClose">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-
-    </div>
-
-
-    <div class="bag-items" id="bagItems">
-
-        <div class="empty-bag">
-
-            <i class="fa-solid fa-spray-can-sparkles"></i>
-
-            <h4>Votre sélection est vide</h4>
-
-            <p>
-                Ajoutez vos fragrances préférées
-                pour préparer votre commande.
-            </p>
-
-            <button class="btn btn-gold" id="emptyBagBtn">
-                Découvrir les parfums
+            <button
+                type="button"
+                class="drawer-close"
+                id="favoritesClose"
+            >
+                ×
             </button>
 
         </div>
 
-    </div>
+        <div
+            class="drawer-body"
+            id="favoriteItems"
+        ></div>
+
+    </aside>
 
 
-    <div class="drawer-footer">
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
 
-        <div class="drawer-total">
-
-            <span>Total estimé</span>
-
-            <strong id="bagTotal">
-                0 DH
-            </strong>
-
-        </div>
-
-        <button class="drawer-whatsapp" id="drawerWhatsapp">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-            Commander sur WhatsApp
-
-        </button>
-
-    </div>
-
-</aside>
+    <div
+        class="toast"
+        id="toast"
+    ></div>
 
 
-<!-- =====================================================
-     TOAST
-===================================================== -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-<div class="toast" id="toast">
-
-    <div class="toast-icon">
-        <i class="fa-solid fa-check"></i>
-    </div>
-
-    <div>
-        <strong>Ajouté à votre sélection</strong>
-        <span>Votre fragrance a été ajoutée.</span>
-    </div>
-
-</div>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
