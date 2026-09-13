@@ -5259,3 +5259,201 @@ footer {
     }
 
 }
+/* =====================================================
+   FIX IMAGES PARFUMS — HOVER / AFFICHAGE
+===================================================== */
+
+/* Le conteneur de l'image reste parfaitement fixe */
+.product-card-image {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* L'image ne doit jamais sortir de son cadre */
+.product-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+
+    transform: none !important;
+    translate: none !important;
+
+    transition: transform 0.35s ease;
+}
+
+/* Pas de déplacement au passage de la souris */
+.product-card:hover .product-card-image img {
+    transform: none !important;
+    translate: none !important;
+}
+
+/* Empêche également le déplacement du contenu de la bouteille */
+.product-card:hover .product-bottle {
+    transform: none !important;
+    translate: none !important;
+}
+
+/* L'image elle-même reste centrée */
+.product-card-image img:hover {
+    transform: none !important;
+}
+
+/* =====================================================
+   MODAL — IMAGE DU PARFUM
+===================================================== */
+
+.modal-product-image {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-product-image img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center;
+
+    transform: none !important;
+}
+
+/* Aucun mouvement dans le détail */
+.modal-product-image:hover img {
+    transform: none !important;
+}
+
+
+/* =====================================================
+   PANIER — IMAGE PETITE ET PROPRE
+===================================================== */
+
+.bag-mini-bottle {
+    position: relative;
+
+    width: 64px !important;
+    min-width: 64px !important;
+    max-width: 64px !important;
+
+    height: 78px !important;
+    min-height: 78px !important;
+    max-height: 78px !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Image du parfum dans le panier */
+.bag-mini-bottle img {
+    display: block;
+
+    width: 58px !important;
+    height: 70px !important;
+
+    max-width: 58px !important;
+    max-height: 70px !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    transform: none !important;
+    translate: none !important;
+}
+
+/* Aucun zoom ou déplacement dans le panier */
+.bag-item:hover .bag-mini-bottle img {
+    transform: none !important;
+}
+
+
+/* =====================================================
+   PANIER — STRUCTURE
+===================================================== */
+
+.bag-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    min-width: 0;
+}
+
+.bag-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.bag-item-info h4 {
+    margin: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bag-item-price {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   MOBILE — PANIER
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .bag-mini-bottle {
+        width: 52px !important;
+        min-width: 52px !important;
+        max-width: 52px !important;
+
+        height: 66px !important;
+        min-height: 66px !important;
+        max-height: 66px !important;
+    }
+
+    .bag-mini-bottle img {
+        width: 48px !important;
+        height: 60px !important;
+
+        max-width: 48px !important;
+        max-height: 60px !important;
+    }
+
+    .bag-item {
+        gap: 10px;
+    }
+
+    .bag-item-price {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE — AUCUN HOVER
+===================================================== */
+
+@media (hover: none) {
+
+    .product-card:hover .product-card-image img,
+    .product-card:hover .product-bottle,
+    .bag-item:hover .bag-mini-bottle img {
+        transform: none !important;
+        translate: none !important;
+    }
+
+}
