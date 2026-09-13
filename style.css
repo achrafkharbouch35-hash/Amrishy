@@ -3718,3 +3718,58 @@ input:focus-visible {
 /* =========================================================
    FIN
 ========================================================= */
+/* =====================================================
+   FIX — BOUTON AJOUTER AU PANIER / SÉLECTION
+===================================================== */
+
+.product-modal {
+    z-index: 7000 !important;
+}
+
+.product-modal .modal-overlay {
+    z-index: 0 !important;
+}
+
+.product-modal .modal-container {
+    position: relative;
+    z-index: 2 !important;
+
+    pointer-events: auto !important;
+}
+
+.product-modal .modal-product-info {
+    position: relative;
+    z-index: 5 !important;
+
+    pointer-events: auto !important;
+}
+
+.product-modal .modal-actions,
+.product-modal .modal-add,
+.product-modal .modal-favorite,
+.product-modal .whatsapp-order,
+.product-modal .size-btn,
+.product-modal .quantity button,
+.product-modal .modal-close {
+    position: relative;
+    z-index: 20 !important;
+
+    pointer-events: auto !important;
+}
+
+.product-modal .modal-add {
+    cursor: pointer;
+
+    touch-action: manipulation;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.product-modal .modal-add:hover {
+    transform: translateY(-2px);
+}
+
+.product-modal .modal-add:active {
+    transform: translateY(0);
+}
