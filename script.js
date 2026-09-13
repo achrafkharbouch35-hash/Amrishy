@@ -3950,30 +3950,30 @@ document.querySelectorAll(
 
 
 /* =====================================================
-   PARALLAX HERO
+   PARALLAX — VRAI FLACON
 ===================================================== */
 
 window.addEventListener(
     "scroll",
     () => {
 
-        const scroll =
-            window.scrollY;
+        const scroll = window.scrollY;
 
-
-        const heroBottle =
+        const bottle =
             document.querySelector(
-                ".hero-bottle"
+                ".real-perfume-bottle"
             );
 
-
         if (
-            heroBottle &&
+            bottle &&
             scroll < window.innerHeight
         ) {
 
-            heroBottle.style.transform =
-                `translateY(${scroll * 0.08}px)`;
+            const movement =
+                scroll * 0.035;
+
+            bottle.style.marginTop =
+                `${movement}px`;
 
         }
 
@@ -3982,7 +3982,6 @@ window.addEventListener(
         passive: true
     }
 );
-
 
 /* =====================================================
    PREVENT IMAGE-LIKE DRAG
