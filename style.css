@@ -4897,3 +4897,365 @@ footer {
     }
 
 }
+
+/* =====================================================
+   PANIER — IMAGES DES PARFUMS
+===================================================== */
+
+.bag-item {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+
+    width: 100%;
+    padding: 14px 0;
+
+    border-bottom: 1px solid rgba(214, 173, 99, 0.15);
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   IMAGE DU PARFUM
+===================================================== */
+
+.bag-item-image {
+
+    width: 72px;
+    height: 82px;
+
+    min-width: 72px;
+    max-width: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181411,
+            #0d0b09
+        );
+
+    border: 1px solid rgba(
+        214,
+        173,
+        99,
+        0.18
+    );
+
+    box-sizing: border-box;
+}
+
+
+/* IMAGE */
+
+.bag-item-image img {
+
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    transform: none !important;
+
+    box-sizing: border-box;
+}
+
+
+/* PLACEHOLDER */
+
+.bag-image-placeholder {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    color: #d6ad63;
+}
+
+
+/* =====================================================
+   INFORMATIONS
+===================================================== */
+
+.bag-item-info {
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.bag-item-category {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #d6ad63;
+
+    text-transform: uppercase;
+}
+
+
+.bag-item-info h4 {
+
+    margin: 0 0 5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    color: #f5f0e8;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.bag-item-size {
+
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    color: rgba(
+        245,
+        240,
+        232,
+        0.55
+    );
+}
+
+
+/* =====================================================
+   SUPPRIMER
+===================================================== */
+
+.bag-item-remove {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    width: fit-content;
+
+    margin-top: 7px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    color: rgba(
+        245,
+        240,
+        232,
+        0.45
+    );
+
+    cursor: pointer;
+
+    transition:
+        color .25s ease;
+}
+
+
+.bag-item-remove:hover {
+
+    color: #d6ad63;
+
+}
+
+
+/* =====================================================
+   PRIX
+===================================================== */
+
+.bag-item-price {
+
+    white-space: nowrap;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #d6ad63;
+
+    align-self: center;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .bag-item {
+
+        grid-template-columns:
+            62px
+            minmax(0, 1fr)
+            auto;
+
+        gap: 10px;
+
+        padding: 12px 0;
+
+    }
+
+
+    .bag-item-image {
+
+        width: 62px;
+        height: 72px;
+
+        min-width: 62px;
+        max-width: 62px;
+
+    }
+
+
+    .bag-item-info h4 {
+
+        font-size: 17px;
+
+    }
+
+
+    .bag-item-category {
+
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .bag-item-size {
+
+        font-size: 10px;
+
+    }
+
+
+    .bag-item-remove {
+
+        font-size: 8px;
+
+    }
+
+
+    .bag-item-price {
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+/* =====================================================
+   TRÈS PETITS TÉLÉPHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .bag-item {
+
+        grid-template-columns:
+            55px
+            minmax(0, 1fr)
+            auto;
+
+        gap: 8px;
+
+    }
+
+
+    .bag-item-image {
+
+        width: 55px;
+        height: 65px;
+
+        min-width: 55px;
+        max-width: 55px;
+
+    }
+
+
+    .bag-item-info h4 {
+
+        font-size: 15px;
+
+    }
+
+
+    .bag-item-price {
+
+        font-size: 14px;
+
+    }
+
+}
