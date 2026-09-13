@@ -3297,16 +3297,47 @@ if (drawerOverlay) {
 ===================================================== */
 
 function sendWhatsAppOrder() {
+    if (!bag || bag.length === 0) {
+        alert("Votre panier est vide.");
+        return;
+    }
 
-    if (0712700527) return;
+    let message = "🖤 *COMMANDE — AMRISHY PARFUMS*%0A%0A";
 
+    let total = 0;
 
-    let message =
-        "Bonjour AMRISHY 👋\n\n";
+    bag.forEach((item, index) => {
+        const itemTotal = Number(item.price) * Number(item.quantity);
+        total += itemTotal;
 
+        message += `*${index + 1}. ${item.name}*%0A`;
 
-    message +=
-        "Je souhaite commander :\n\n";
+        if (item.isPack && item.selectedPerfumes) {
+            message += `Pack : ${item.name}%0A`;
+            message += `Parfums sélectionnés :%0A`;
+
+            item.selectedPerfumes.forEach((p) => {
+                message += `• ${p.name} — ${p.type}%0A`;
+            });
+
+            message += `Quantité : ${item.quantity}%0A`;
+        } else {
+            message += `Type : ${item.type || "EAU DE PARFUM"}%0A`;
+            message += `Format : ${item.size} ml%0A`;
+            message += `Quantité : ${item.quantity}%0A`;
+        }
+
+        message += `Prix : ${itemTotal} DH%0A%0A`;
+    });
+
+    message += `━━━━━━━━━━━━━━%0A`;
+    message += `*TOTAL : ${total} DH*%0A%0A`;
+    message += `Bonjour, je souhaite passer cette commande.`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+
+    window.open(url, "_blank");
+}
 
 
     /* ================================================
@@ -4032,3 +4063,17 @@ console.log(
 console.log(
     "Tarifs Extrait : 30ml 150 DH · 50ml 170 DH · 100ml 320 DH"
 );
+document.addEventListener("DOMContentLoaded", function () {
+
+    const whatsappButtons = document.querySelectorAll(
+        "#whatsappOrder, #checkoutWhatsApp, .whatsapp-order, .btn-whatsapp"
+    );
+
+    whatsappButtons.forEach(function (button) {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            sendWhatsAppOrder();
+        });
+    });
+
+});
