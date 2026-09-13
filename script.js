@@ -11,16 +11,11 @@
 
 const WHATSAPP_NUMBER = "212600000000";
 
-
-/* =====================================================
-   DOSSIER DES IMAGES
-===================================================== */
-
 const IMAGE_PATH = "";
 
 
 /* =====================================================
-   PRODUCTS — 88 PARFUMS
+   CATALOGUE — 88 PARFUMS
 ===================================================== */
 
 const products = [
@@ -416,7 +411,7 @@ const products = [
         shortName: "TAJ",
         category: "femme",
         categoryLabel: "FEMME",
-        image: "escada-taj.jpg",
+        image: "escada-taj-2.jpg",
         tagline: "Une évasion exotique.",
         description: "Une seconde référence Escada Taj présente dans votre catalogue.",
         top: "Fruits exotiques",
@@ -1002,10 +997,10 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "versace-eros.jpg",
-        tagline: "Force et séduction.",
-        description: "Une fragrance masculine fraîche, intense et séduisante.",
-        top: "Menthe",
-        heart: "Tonka",
+        tagline: "Passion et puissance.",
+        description: "Une fragrance masculine fraîche, sensuelle et énergique.",
+        top: "Menthe & Citron",
+        heart: "Pomme & Géranium",
         base: "Vanille & Bois",
         price30: 490,
         price50: 640,
@@ -1022,11 +1017,11 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "bleu-chanel.jpg",
-        tagline: "Une liberté absolue.",
-        description: "Une fragrance masculine élégante, fraîche et boisée.",
+        tagline: "Une élégance intemporelle.",
+        description: "Une fragrance masculine fraîche, boisée et sophistiquée.",
         top: "Agrumes",
         heart: "Gingembre",
-        base: "Bois de santal",
+        base: "Bois & Encens",
         price30: 490,
         price50: 640,
         price100: 790,
@@ -1037,15 +1032,15 @@ const products = [
     {
         id: "H107",
         catalogue: "107",
-        name: "La Coste Noir",
-        shortName: "NOIR",
+        name: "Lacoste Noir",
+        shortName: "LACOSTE",
         category: "homme",
         categoryLabel: "HOMME",
         image: "lacoste-noir.jpg",
-        tagline: "Élégance et fraîcheur.",
+        tagline: "Élégance et caractère.",
         description: "Une fragrance masculine fraîche et élégante.",
-        top: "Fruits",
-        heart: "Épices",
+        top: "Agrumes",
+        heart: "Fleurs",
         base: "Bois",
         price30: 450,
         price50: 610,
@@ -1058,15 +1053,15 @@ const products = [
         id: "H108",
         catalogue: "108",
         name: "Allure Sport",
-        shortName: "ALLURE",
+        shortName: "ALLURE SPORT",
         category: "homme",
         categoryLabel: "HOMME",
         image: "allure-sport.jpg",
-        tagline: "Énergie et élégance.",
-        description: "Une fragrance masculine fraîche, dynamique et sportive.",
+        tagline: "Énergie et mouvement.",
+        description: "Une fragrance masculine fraîche, sportive et élégante.",
         top: "Agrumes",
         heart: "Poivre",
-        base: "Tonka & Musc",
+        base: "Musc & Bois",
         price30: 490,
         price50: 640,
         price100: 790,
@@ -1082,7 +1077,7 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "sovage.jpg",
-        tagline: "Libre. Sauvage. Magnétique.",
+        tagline: "Libre et magnétique.",
         description: "Une fragrance masculine fraîche et puissante.",
         top: "Bergamote",
         heart: "Poivre",
@@ -1102,10 +1097,10 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "giorgio-armani-homme.jpg",
-        tagline: "L'élégance italienne.",
-        description: "Une fragrance masculine raffinée et sophistiquée.",
+        tagline: "Une élégance italienne.",
+        description: "Une fragrance masculine élégante et raffinée.",
         top: "Agrumes",
-        heart: "Aromatiques",
+        heart: "Aromates",
         base: "Bois",
         price30: 490,
         price50: 640,
@@ -1125,8 +1120,8 @@ const products = [
         tagline: "Une signature italienne.",
         description: "Une fragrance masculine élégante et expressive.",
         top: "Agrumes",
-        heart: "Aromatiques",
-        base: "Bois",
+        heart: "Aromates",
+        base: "Bois & Musc",
         price30: 490,
         price50: 640,
         price100: 790,
@@ -1142,31 +1137,31 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "gucci-homme.jpg",
-        tagline: "Luxe et caractère.",
-        description: "Une fragrance masculine élégante et sophistiquée.",
+        tagline: "L'élégance italienne.",
+        description: "Une fragrance masculine moderne et sophistiquée.",
         top: "Agrumes",
-        heart: "Fleurs",
-        base: "Bois & Musc",
+        heart: "Épices",
+        base: "Bois",
         price30: 490,
         price50: 640,
         price100: 790,
-        badge: "PREMIUM",
+        badge: "",
         color: "dark"
     },
 
     {
         id: "H113",
         catalogue: "113",
-        name: "Chanel",
+        name: "Chanel Homme",
         shortName: "CHANEL",
         category: "homme",
         categoryLabel: "HOMME",
         image: "chanel-homme.jpg",
-        tagline: "L'élégance absolue.",
-        description: "Une fragrance masculine intemporelle et raffinée.",
+        tagline: "Une élégance masculine.",
+        description: "Une fragrance masculine sophistiquée et intemporelle.",
         top: "Agrumes",
-        heart: "Aromatiques",
-        base: "Bois",
+        heart: "Épices",
+        base: "Bois & Musc",
         price30: 490,
         price50: 640,
         price100: 790,
@@ -1182,8 +1177,8 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "givenchy-homme.jpg",
-        tagline: "Un caractère raffiné.",
-        description: "Une fragrance masculine élégante et moderne.",
+        tagline: "Élégance française.",
+        description: "Une fragrance masculine raffinée et sophistiquée.",
         top: "Agrumes",
         heart: "Épices",
         base: "Bois",
@@ -1202,15 +1197,15 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "carolina-herrera-homme.jpg",
-        tagline: "Élégance et puissance.",
-        description: "Une fragrance masculine sophistiquée et séduisante.",
+        tagline: "Charisme et élégance.",
+        description: "Une fragrance masculine élégante avec une forte personnalité.",
         top: "Agrumes",
         heart: "Épices",
         base: "Bois",
         price30: 490,
         price50: 640,
         price100: 790,
-        badge: "FAVORI",
+        badge: "BEST-SELLER",
         color: "dark"
     },
 
@@ -1223,9 +1218,9 @@ const products = [
         categoryLabel: "HOMME",
         image: "lacoste-homme.jpg",
         tagline: "Fraîcheur et élégance.",
-        description: "Une fragrance masculine fraîche et sportive.",
+        description: "Une fragrance masculine fraîche et polyvalente.",
         top: "Agrumes",
-        heart: "Aromatiques",
+        heart: "Fleurs",
         base: "Bois",
         price30: 450,
         price50: 610,
@@ -1242,7 +1237,7 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "azzaro-homme.jpg",
-        tagline: "Charisme et séduction.",
+        tagline: "Un caractère affirmé.",
         description: "Une fragrance masculine chaleureuse et élégante.",
         top: "Agrumes",
         heart: "Épices",
@@ -1257,13 +1252,13 @@ const products = [
     {
         id: "H118",
         catalogue: "118",
-        name: "Hermes",
-        shortName: "HERMES",
+        name: "Hermès",
+        shortName: "HERMÈS",
         category: "homme",
         categoryLabel: "HOMME",
         image: "hermes-homme.jpg",
-        tagline: "Une élégance naturelle.",
-        description: "Une fragrance masculine raffinée et boisée.",
+        tagline: "Raffinement et distinction.",
+        description: "Une fragrance masculine élégante et raffinée.",
         top: "Agrumes",
         heart: "Épices",
         base: "Bois",
@@ -1282,11 +1277,11 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "diesel-homme.jpg",
-        tagline: "Une attitude affirmée.",
-        description: "Une fragrance masculine moderne et expressive.",
-        top: "Fruité",
+        tagline: "Audace et caractère.",
+        description: "Une fragrance masculine moderne et audacieuse.",
+        top: "Agrumes",
         heart: "Épices",
-        base: "Bois",
+        base: "Bois & Ambre",
         price30: 490,
         price50: 640,
         price100: 790,
@@ -1302,15 +1297,15 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "cartier-homme.jpg",
-        tagline: "Luxe et distinction.",
-        description: "Une fragrance masculine élégante et sophistiquée.",
+        tagline: "Une signature prestigieuse.",
+        description: "Une fragrance masculine élégante et raffinée.",
         top: "Agrumes",
         heart: "Épices",
         base: "Bois",
-        price30: 520,
-        price50: 690,
-        price100: 850,
-        badge: "PREMIUM",
+        price30: 490,
+        price50: 640,
+        price100: 790,
+        badge: "LUXE",
         color: "dark"
     },
 
@@ -1322,10 +1317,10 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "zara-homme.jpg",
-        tagline: "Moderne et accessible.",
-        description: "Une fragrance masculine polyvalente et moderne.",
+        tagline: "Une élégance accessible.",
+        description: "Une fragrance masculine moderne et polyvalente.",
         top: "Agrumes",
-        heart: "Aromatiques",
+        heart: "Épices",
         base: "Bois",
         price30: 450,
         price50: 610,
@@ -1342,35 +1337,35 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "thierry-mugler.jpg",
-        tagline: "Une signature puissante.",
-        description: "Une fragrance masculine intense et originale.",
-        top: "Agrumes",
-        heart: "Café",
-        base: "Bois",
-        price30: 520,
-        price50: 690,
-        price100: 850,
-        badge: "EXCLUSIF",
+        tagline: "Une signature intense.",
+        description: "Une fragrance masculine profonde et distinctive.",
+        top: "Épices",
+        heart: "Bois",
+        base: "Ambre",
+        price30: 490,
+        price50: 640,
+        price100: 790,
+        badge: "PREMIUM",
         color: "dark"
     },
 
     {
         id: "H123",
         catalogue: "123",
-        name: "David Off",
+        name: "Davidoff",
         shortName: "DAVIDOFF",
         category: "homme",
         categoryLabel: "HOMME",
         image: "davidoff.jpg",
         tagline: "Fraîcheur emblématique.",
-        description: "Une fragrance masculine fraîche et aquatique.",
+        description: "Une fragrance masculine fraîche et vivifiante.",
         top: "Agrumes",
-        heart: "Aromatiques",
+        heart: "Aromates",
         base: "Bois",
         price30: 450,
         price50: 610,
         price100: 780,
-        badge: "CLASSIQUE",
+        badge: "",
         color: "dark"
     },
 
@@ -1382,15 +1377,15 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "prada-homme.jpg",
-        tagline: "Minimalisme sophistiqué.",
-        description: "Une fragrance masculine élégante et moderne.",
+        tagline: "Minimalisme et sophistication.",
+        description: "Une fragrance masculine propre, moderne et élégante.",
         top: "Agrumes",
-        heart: "Aromatiques",
-        base: "Ambre & Bois",
+        heart: "Iris",
+        base: "Musc & Bois",
         price30: 490,
         price50: 640,
         price100: 790,
-        badge: "PREMIUM",
+        badge: "",
         color: "dark"
     },
 
@@ -1402,15 +1397,15 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "bvlgari-homme.jpg",
-        tagline: "L'élégance italienne.",
-        description: "Une fragrance masculine raffinée et contemporaine.",
+        tagline: "Élégance méditerranéenne.",
+        description: "Une fragrance masculine fraîche et raffinée.",
         top: "Agrumes",
         heart: "Thé",
         base: "Bois",
         price30: 490,
         price50: 640,
         price100: 790,
-        badge: "PREMIUM",
+        badge: "ICONIQUE",
         color: "dark"
     },
 
@@ -1423,14 +1418,14 @@ const products = [
         categoryLabel: "HOMME",
         image: "versace-homme.jpg",
         tagline: "Charisme méditerranéen.",
-        description: "Une fragrance masculine élégante et séduisante.",
+        description: "Une fragrance masculine expressive et élégante.",
         top: "Agrumes",
         heart: "Épices",
         base: "Bois",
         price30: 490,
         price50: 640,
         price100: 790,
-        badge: "ICONIQUE",
+        badge: "",
         color: "dark"
     },
 
@@ -1443,10 +1438,10 @@ const products = [
         categoryLabel: "HOMME",
         image: "paco-rabanne.jpg",
         tagline: "Puissance et séduction.",
-        description: "Une fragrance masculine intense et moderne.",
+        description: "Une fragrance masculine moderne et magnétique.",
         top: "Agrumes",
         heart: "Épices",
-        base: "Bois & Tonka",
+        base: "Vanille & Bois",
         price30: 490,
         price50: 640,
         price100: 790,
@@ -1462,11 +1457,11 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "nikos.jpg",
-        tagline: "Une signature masculine.",
-        description: "Une fragrance masculine élégante et chaleureuse.",
+        tagline: "Une présence élégante.",
+        description: "Une fragrance masculine chaleureuse et raffinée.",
         top: "Agrumes",
         heart: "Fleurs",
-        base: "Vanille & Bois",
+        base: "Bois",
         price30: 450,
         price50: 610,
         price100: 780,
@@ -1482,11 +1477,11 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "carolina-herrera-homme-2.jpg",
-        tagline: "Un caractère iconique.",
-        description: "Une seconde référence Carolina Herrera présente dans votre catalogue.",
+        tagline: "Une signature iconique.",
+        description: "Une seconde référence Carolina Herrera masculine.",
         top: "Agrumes",
         heart: "Épices",
-        base: "Bois",
+        base: "Bois & Tonka",
         price30: 490,
         price50: 640,
         price100: 790,
@@ -1502,14 +1497,14 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "guerlain-homme.jpg",
-        tagline: "L'art de la parfumerie.",
-        description: "Une fragrance masculine raffinée et sophistiquée.",
+        tagline: "Tradition et raffinement.",
+        description: "Une fragrance masculine élégante et sophistiquée.",
         top: "Agrumes",
-        heart: "Aromatiques",
-        base: "Bois",
-        price30: 520,
-        price50: 690,
-        price100: 850,
+        heart: "Aromates",
+        base: "Bois & Musc",
+        price30: 490,
+        price50: 640,
+        price100: 790,
         badge: "PREMIUM",
         color: "dark"
     },
@@ -1522,11 +1517,11 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "mont-blanc.jpg",
-        tagline: "Fraîcheur et raffinement.",
-        description: "Une fragrance masculine fraîche, élégante et polyvalente.",
+        tagline: "Élégance intemporelle.",
+        description: "Une fragrance masculine fraîche et boisée.",
         top: "Agrumes",
-        heart: "Aromatiques",
-        base: "Bois",
+        heart: "Épices",
+        base: "Bois & Musc",
         price30: 490,
         price50: 640,
         price100: 790,
@@ -1543,10 +1538,10 @@ const products = [
         categoryLabel: "HOMME",
         image: "tom-ford-homme.jpg",
         tagline: "Luxe et caractère.",
-        description: "Une fragrance masculine intense, sophistiquée et luxueuse.",
+        description: "Une fragrance masculine riche, élégante et sophistiquée.",
         top: "Épices",
         heart: "Bois",
-        base: "Ambre & Oud",
+        base: "Ambre & Vanille",
         price30: 550,
         price50: 720,
         price100: 890,
@@ -1562,15 +1557,15 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "ysl-homme.jpg",
-        tagline: "Une élégance audacieuse.",
-        description: "Une fragrance masculine moderne et sophistiquée.",
+        tagline: "Audace et élégance.",
+        description: "Une fragrance masculine moderne et charismatique.",
         top: "Agrumes",
-        heart: "Aromatiques",
+        heart: "Aromates",
         base: "Bois",
         price30: 490,
         price50: 640,
         price100: 790,
-        badge: "BEST-SELLER",
+        badge: "ICONIQUE",
         color: "dark"
     },
 
@@ -1582,10 +1577,10 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "hugo-boss-2.jpg",
-        tagline: "L'assurance masculine.",
-        description: "Une seconde référence Hugo Boss présente dans votre catalogue.",
-        top: "Fruité",
-        heart: "Aromatiques",
+        tagline: "Un classique masculin.",
+        description: "Une seconde référence Hugo Boss masculine.",
+        top: "Fruits",
+        heart: "Aromates",
         base: "Bois",
         price30: 490,
         price50: 640,
@@ -1602,8 +1597,8 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "valentino-homme.jpg",
-        tagline: "Élégance italienne.",
-        description: "Une fragrance masculine moderne et raffinée.",
+        tagline: "Une élégance italienne.",
+        description: "Une fragrance masculine élégante et moderne.",
         top: "Agrumes",
         heart: "Épices",
         base: "Bois & Vanille",
@@ -1622,10 +1617,10 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "jean-paul-gaultier.jpg",
-        tagline: "Un caractère iconique.",
+        tagline: "Une signature iconique.",
         description: "Une fragrance masculine sensuelle et reconnaissable.",
-        top: "Lavande",
-        heart: "Épices",
+        top: "Menthe",
+        heart: "Lavande",
         base: "Vanille & Tonka",
         price30: 490,
         price50: 640,
@@ -1642,15 +1637,15 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "majouri.jpg",
-        tagline: "Une signature précieuse.",
-        description: "Une fragrance masculine élégante et chaleureuse.",
+        tagline: "Une signature orientale.",
+        description: "Une fragrance masculine chaleureuse et sophistiquée.",
         top: "Épices",
         heart: "Bois",
         base: "Ambre & Musc",
         price30: 520,
         price50: 690,
         price100: 850,
-        badge: "EXCLUSIF",
+        badge: "PREMIUM",
         color: "dark"
     },
 
@@ -1658,12 +1653,12 @@ const products = [
         id: "H138",
         catalogue: "138",
         name: "Parfum de Marly",
-        shortName: "MARLY",
+        shortName: "PARFUM DE MARLY",
         category: "homme",
         categoryLabel: "HOMME",
         image: "parfum-de-marly.jpg",
-        tagline: "Le luxe à l'état pur.",
-        description: "Une fragrance masculine luxueuse et sophistiquée.",
+        tagline: "Luxe et puissance.",
+        description: "Une fragrance masculine luxueuse, élégante et sophistiquée.",
         top: "Agrumes",
         heart: "Épices",
         base: "Bois & Ambre",
@@ -1682,8 +1677,8 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "paris-hilton.jpg",
-        tagline: "Glamour et caractère.",
-        description: "Une fragrance élégante et moderne.",
+        tagline: "Une signature moderne.",
+        description: "Une fragrance masculine moderne et séduisante.",
         top: "Fruits",
         heart: "Fleurs",
         base: "Bois & Musc",
@@ -1702,9 +1697,9 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "britney-spears.jpg",
-        tagline: "Une signature originale.",
-        description: "Une fragrance moderne et expressive.",
-        top: "Fruité",
+        tagline: "Une fragrance originale.",
+        description: "Une fragrance moderne, douce et expressive.",
+        top: "Fruits",
         heart: "Fleurs",
         base: "Vanille & Musc",
         price30: 450,
@@ -1722,15 +1717,15 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "joop.jpg",
-        tagline: "Intense et reconnaissable.",
-        description: "Une fragrance masculine chaleureuse et expressive.",
+        tagline: "Une personnalité affirmée.",
+        description: "Une fragrance masculine intense et distinctive.",
         top: "Agrumes",
-        heart: "Fleurs",
-        base: "Bois & Musc",
+        heart: "Épices",
+        base: "Vanille & Bois",
         price30: 490,
         price50: 640,
         price100: 790,
-        badge: "CLASSIQUE",
+        badge: "",
         color: "dark"
     },
 
@@ -1742,8 +1737,8 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "musk-oud.jpg",
-        tagline: "Mystère oriental.",
-        description: "Une fragrance masculine profonde mêlant musc et oud.",
+        tagline: "Oud et profondeur.",
+        description: "Une fragrance masculine orientale, profonde et chaleureuse.",
         top: "Épices",
         heart: "Oud",
         base: "Musc & Ambre",
@@ -1751,7 +1746,7 @@ const products = [
         price50: 690,
         price100: 850,
         badge: "PREMIUM",
-        color: "oud"
+        color: "dark"
     },
 
     {
@@ -1762,8 +1757,8 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "amber-musk.jpg",
-        tagline: "Chaleur et profondeur.",
-        description: "Une fragrance chaleureuse construite autour de l'ambre et du musc.",
+        tagline: "Chaleur et sensualité.",
+        description: "Une fragrance chaleureuse mêlant ambre et musc.",
         top: "Épices",
         heart: "Ambre",
         base: "Musc & Bois",
@@ -1771,7 +1766,7 @@ const products = [
         price50: 690,
         price100: 850,
         badge: "PREMIUM",
-        color: "amber"
+        color: "dark"
     },
 
     {
@@ -1782,142 +1777,107 @@ const products = [
         category: "homme",
         categoryLabel: "HOMME",
         image: "modhila.jpg",
-        tagline: "Une présence qui reste.",
-        description: "Une fragrance masculine chaleureuse et mystérieuse.",
+        tagline: "Une signature mystérieuse.",
+        description: "Une fragrance masculine chaleureuse, élégante et distinctive.",
         top: "Épices",
         heart: "Bois",
         base: "Ambre & Musc",
-        price30: 520,
-        price50: 690,
-        price100: 850,
-        badge: "EXCLUSIF",
-        color: "amber"
+        price30: 490,
+        price50: 640,
+        price100: 790,
+        badge: "NOUVEAU",
+        color: "dark"
     }
 
 ];
 
 
 /* =====================================================
-   IMAGE HELPER
-===================================================== */
-
-function getProductImage(product) {
-
-    return IMAGE_PATH + product.image;
-
-}
-
-
-/* =====================================================
-   STATE
+   VARIABLES
 ===================================================== */
 
 let currentProduct = null;
-
 let currentSize = 50;
-
-let currentPrice = 640;
-
+let currentPrice = 650;
 let quantity = 1;
 
-let bag = [];
+let favorites =
+    JSON.parse(localStorage.getItem("elixirFavorites")) || [];
 
-let favorites = [];
+let bag =
+    JSON.parse(localStorage.getItem("elixirBag")) || [];
 
 
 /* =====================================================
    DOM
 ===================================================== */
 
-const loader =
-    document.getElementById("loader");
+const loader = document.getElementById("loader");
+const navbar = document.getElementById("navbar");
+const particles = document.getElementById("particles");
+const productsGrid = document.getElementById("productsGrid");
+const productCount = document.getElementById("productCount");
 
-const navbar =
-    document.getElementById("navbar");
+const modal = document.getElementById("productModal");
+const modalOverlay = document.getElementById("modalOverlay");
+const modalClose = document.getElementById("modalClose");
 
-const particles =
-    document.getElementById("particles");
+const modalTitle = document.getElementById("modalTitle");
+const modalCategory = document.getElementById("modalCategory");
+const modalTagline = document.getElementById("modalTagline");
+const modalDescription = document.getElementById("modalDescription");
+const modalTop = document.getElementById("modalTop");
+const modalHeart = document.getElementById("modalHeart");
+const modalBase = document.getElementById("modalBase");
+const modalPrice = document.getElementById("modalPrice");
+const modalBottleName = document.getElementById("modalBottleName");
 
-const productsGrid =
-    document.getElementById("productsGrid");
+const quantityValue = document.getElementById("quantityValue");
+const modalFavorite = document.getElementById("modalFavorite");
 
-const productCount =
-    document.getElementById("productCount");
+const favoritesCount = document.getElementById("favoritesCount");
+const bagCount = document.getElementById("bagCount");
 
-const modal =
-    document.getElementById("productModal");
+const bagDrawer = document.getElementById("bagDrawer");
+const drawerOverlay = document.getElementById("drawerOverlay");
+const bagItems = document.getElementById("bagItems");
+const bagTotal = document.getElementById("bagTotal");
 
-const modalOverlay =
-    document.getElementById("modalOverlay");
+const toast = document.getElementById("toast");
 
-const modalClose =
-    document.getElementById("modalClose");
+const searchPanel = document.getElementById("searchPanel");
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
 
-const modalTitle =
-    document.getElementById("modalTitle");
+const mobileMenu = document.getElementById("mobileMenu");
 
-const modalCategory =
-    document.getElementById("modalCategory");
 
-const modalTagline =
-    document.getElementById("modalTagline");
+/* =====================================================
+   IMAGE
+===================================================== */
 
-const modalDescription =
-    document.getElementById("modalDescription");
+function getProductImage(product) {
+    return IMAGE_PATH + product.image;
+}
 
-const modalTop =
-    document.getElementById("modalTop");
 
-const modalHeart =
-    document.getElementById("modalHeart");
+/* =====================================================
+   SAVE LOCAL STORAGE
+===================================================== */
 
-const modalBase =
-    document.getElementById("modalBase");
+function saveFavorites() {
+    localStorage.setItem(
+        "elixirFavorites",
+        JSON.stringify(favorites)
+    );
+}
 
-const modalPrice =
-    document.getElementById("modalPrice");
-
-const modalBottleName =
-    document.getElementById("modalBottleName");
-
-const quantityValue =
-    document.getElementById("quantityValue");
-
-const modalFavorite =
-    document.getElementById("modalFavorite");
-
-const favoritesCount =
-    document.getElementById("favoritesCount");
-
-const bagCount =
-    document.getElementById("bagCount");
-
-const bagDrawer =
-    document.getElementById("bagDrawer");
-
-const drawerOverlay =
-    document.getElementById("drawerOverlay");
-
-const bagItems =
-    document.getElementById("bagItems");
-
-const bagTotal =
-    document.getElementById("bagTotal");
-
-const toast =
-    document.getElementById("toast");
-
-const searchPanel =
-    document.getElementById("searchPanel");
-
-const searchInput =
-    document.getElementById("searchInput");
-
-const searchResults =
-    document.getElementById("searchResults");
-
-const mobileMenu =
-    document.getElementById("mobileMenu");
+function saveBag() {
+    localStorage.setItem(
+        "elixirBag",
+        JSON.stringify(bag)
+    );
+}
 
 
 /* =====================================================
@@ -1932,11 +1892,7 @@ window.addEventListener("load", () => {
             loader.classList.add("hidden");
         }
 
-        document.body.classList.remove(
-            "modal-open"
-        );
-
-    }, 1800);
+    }, 700);
 
 });
 
@@ -1951,33 +1907,30 @@ function createParticles() {
 
     const amount =
         window.innerWidth < 700
-            ? 25
-            : 50;
+            ? 20
+            : 45;
 
     for (let i = 0; i < amount; i++) {
 
         const particle =
             document.createElement("span");
 
-        particle.className =
-            "particle";
+        particle.className = "particle";
 
         particle.style.left =
             Math.random() * 100 + "%";
 
         particle.style.animationDuration =
-            (10 + Math.random() * 15) + "s";
+            10 + Math.random() * 15 + "s";
 
         particle.style.animationDelay =
-            (-Math.random() * 15) + "s";
+            -Math.random() * 15 + "s";
 
         particle.style.opacity =
-            (0.15 + Math.random() * 0.5);
+            0.15 + Math.random() * 0.45;
 
         particles.appendChild(particle);
-
     }
-
 }
 
 createParticles();
@@ -1992,97 +1945,53 @@ window.addEventListener("scroll", () => {
     if (!navbar) return;
 
     if (window.scrollY > 60) {
-
         navbar.classList.add("scrolled");
-
     } else {
-
         navbar.classList.remove("scrolled");
-
     }
 
 });
 
 
 /* =====================================================
-   CUSTOM CURSOR
-===================================================== */
-
-const cursor =
-    document.querySelector(".cursor");
-
-const follower =
-    document.querySelector(".cursor-follower");
-
-if (cursor && follower) {
-
-    let mouseX = 0;
-    let mouseY = 0;
-
-    let followerX = 0;
-    let followerY = 0;
-
-    document.addEventListener(
-        "mousemove",
-        (e) => {
-
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-
-            cursor.style.left =
-                mouseX + "px";
-
-            cursor.style.top =
-                mouseY + "px";
-
-        }
-    );
-
-    function animateCursor() {
-
-        followerX +=
-            (mouseX - followerX) * .12;
-
-        followerY +=
-            (mouseY - followerY) * .12;
-
-        follower.style.left =
-            followerX + "px";
-
-        follower.style.top =
-            followerY + "px";
-
-        requestAnimationFrame(
-            animateCursor
-        );
-
-    }
-
-    animateCursor();
-
-}
-
-
-/* =====================================================
-   PRODUCT IMAGE HTML
+   PRODUCT BOTTLE
 ===================================================== */
 
 function bottleHTML(product) {
 
     return `
-        <div class="real-product-image">
 
-            <img
-                src="${getProductImage(product)}"
-                alt="${product.name}"
-                loading="lazy"
-                class="perfume-image"
-                onerror="this.onerror=null; this.src='';"
-            >
+        <div class="product-bottle">
+
+            <div class="product-cap"></div>
+
+            <div class="product-neck"></div>
+
+            <div class="product-body">
+
+                <img
+                    src="${getProductImage(product)}"
+                    alt="${product.name}"
+                    class="perfume-image"
+                    loading="lazy"
+                    onerror="this.style.display='none';"
+                >
+
+                <div class="product-label">
+
+                    <small>ÉLIXIR</small>
+
+                    <strong>
+                        ${product.shortName}
+                    </strong>
+
+                </div>
+
+            </div>
 
         </div>
-    `;
 
+    `;
 }
 
 
@@ -2111,196 +2020,232 @@ function renderProducts(filter = "all") {
 
     productsGrid.innerHTML = "";
 
-    filtered.forEach(
-        (product, index) => {
+    filtered.forEach((product, index) => {
 
-            const isFavorite =
-                favorites.includes(product.id);
+        const isFavorite =
+            favorites.includes(product.id);
 
-            const card =
-                document.createElement("article");
+        const card =
+            document.createElement("article");
 
-            card.className =
-                "product-card";
+        card.className =
+            "product-card reveal";
 
-            card.dataset.id =
-                product.id;
+        card.style.animationDelay =
+            `${Math.min(index * 0.04, 0.5)}s`;
 
-            card.innerHTML = `
+        card.innerHTML = `
+
+            <div class="product-card-image">
 
                 ${
                     product.badge
                         ? `
-                            <div class="product-badge">
+                            <span class="product-badge">
                                 ${product.badge}
-                            </div>
+                            </span>
                           `
                         : ""
                 }
 
                 <button
-                    class="
-                        product-heart
-                        ${isFavorite ? "active" : ""}
-                    "
+                    class="favorite-btn ${isFavorite ? "active" : ""}"
                     data-favorite="${product.id}"
                     aria-label="Ajouter aux favoris"
                 >
-                    <i class="
-                        ${
-                            isFavorite
-                                ? "fa-solid"
-                                : "fa-regular"
-                        }
-                        fa-heart
-                    "></i>
+                    ${isFavorite ? "♥" : "♡"}
                 </button>
 
-                <div class="product-card-image">
+                ${bottleHTML(product)}
 
-                    ${bottleHTML(product)}
+            </div>
+
+
+            <div class="product-card-content">
+
+                <span class="product-category">
+                    ${product.categoryLabel}
+                </span>
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+                <p class="product-tagline">
+                    ${product.tagline}
+                </p>
+
+                <div class="product-price">
+
+                    <span>
+                        À partir de
+                    </span>
+
+                    <strong>
+                        ${product.price30} DH
+                    </strong>
 
                 </div>
 
-                <div class="product-info">
+                <button
+                    class="product-view-btn"
+                    data-product="${product.id}"
+                >
+                    Découvrir
+                </button>
 
-                    <span class="product-category">
-                        ${product.categoryLabel}
-                    </span>
+            </div>
 
-                    <span class="product-reference">
-                        Réf. ${product.catalogue}
-                    </span>
+        `;
 
-                    <h3 class="product-name">
-                        ${product.name}
-                    </h3>
+        productsGrid.appendChild(card);
 
-                    <p class="product-tagline">
-                        ${product.tagline}
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <span class="product-price">
-                            À partir de ${product.price30} DH
-                        </span>
-
-                        <span class="product-open">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </div>
-            `;
-
-            productsGrid.appendChild(card);
-
-            setTimeout(() => {
-
-                card.classList.add("visible");
-
-            }, index * 40);
-
-        }
-    );
-
-    attachProductEvents();
-
-}
+    });
 
 
-/* =====================================================
-   PRODUCT EVENTS
-===================================================== */
+    /* FAVORITES */
 
-function attachProductEvents() {
+    productsGrid
+        .querySelectorAll("[data-favorite]")
+        .forEach(button => {
 
-    document.querySelectorAll(
-        ".product-card"
-    ).forEach(card => {
+            button.addEventListener(
+                "click",
+                event => {
 
-        card.addEventListener(
-            "click",
-            (event) => {
+                    event.stopPropagation();
 
-                if (
-                    event.target.closest(
-                        ".product-heart"
-                    )
-                ) {
-                    return;
+                    toggleFavorite(
+                        button.dataset.favorite
+                    );
+
                 }
+            );
 
-                const id =
-                    card.dataset.id;
-
-                openProduct(id);
-
-            }
-        );
-
-    });
+        });
 
 
-    document.querySelectorAll(
-        "[data-favorite]"
-    ).forEach(button => {
+    /* PRODUCT MODAL */
 
-        button.addEventListener(
-            "click",
-            (event) => {
+    productsGrid
+        .querySelectorAll("[data-product]")
+        .forEach(button => {
 
-                event.stopPropagation();
+            button.addEventListener(
+                "click",
+                () => {
 
-                const id =
-                    button.dataset.favorite;
+                    openProduct(
+                        button.dataset.product
+                    );
 
-                toggleFavorite(id);
+                }
+            );
 
-            }
-        );
-
-    });
-
-}
+        });
 
 
-/* =====================================================
-   FILTER
-===================================================== */
+    /* REVEAL */
 
-document.querySelectorAll(
-    ".filter-btn"
-).forEach(button => {
+    if ("IntersectionObserver" in window) {
 
-    button.addEventListener(
-        "click",
-        () => {
+        const observer =
+            new IntersectionObserver(
+                entries => {
 
-            document.querySelectorAll(
-                ".filter-btn"
-            ).forEach(btn => {
+                    entries.forEach(entry => {
 
-                btn.classList.remove(
-                    "active"
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                "revealed"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.08
+                }
+            );
+
+        productsGrid
+            .querySelectorAll(".reveal")
+            .forEach(element => {
+
+                observer.observe(element);
+
+            });
+
+    } else {
+
+        productsGrid
+            .querySelectorAll(".reveal")
+            .forEach(element => {
+
+                element.classList.add(
+                    "revealed"
                 );
 
             });
 
-            button.classList.add(
-                "active"
-            );
+    }
 
-            renderProducts(
-                button.dataset.filter
-            );
+}
 
-        }
-    );
 
-});
+/* =====================================================
+   FILTERS
+===================================================== */
+
+document
+    .querySelectorAll(".filter-btn")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll(".filter-btn")
+                    .forEach(btn => {
+
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+                button.classList.add("active");
+
+                renderProducts(
+                    button.dataset.filter
+                );
+
+            }
+        );
+
+    });
+
+
+function getCurrentFilter() {
+
+    const active =
+        document.querySelector(
+            ".filter-btn.active"
+        );
+
+    return active
+        ? active.dataset.filter
+        : "all";
+
+}
 
 
 /* =====================================================
@@ -2309,123 +2254,60 @@ document.querySelectorAll(
 
 function openProduct(id) {
 
-    currentProduct =
+    const product =
         products.find(
-            product =>
-                product.id === id
+            item => item.id === id
         );
 
-    if (!currentProduct) return;
+    if (!product) return;
+
+    currentProduct = product;
 
     currentSize = 50;
 
     currentPrice =
-        currentProduct.price50;
+        product.price50;
 
     quantity = 1;
 
 
     if (modalTitle)
         modalTitle.textContent =
-            currentProduct.name;
+            product.name;
 
     if (modalCategory)
         modalCategory.textContent =
-            currentProduct.categoryLabel;
+            product.categoryLabel;
 
     if (modalTagline)
         modalTagline.textContent =
-            currentProduct.tagline;
+            product.tagline;
 
     if (modalDescription)
         modalDescription.textContent =
-            currentProduct.description;
+            product.description;
 
     if (modalTop)
         modalTop.textContent =
-            currentProduct.top;
+            product.top;
 
     if (modalHeart)
         modalHeart.textContent =
-            currentProduct.heart;
+            product.heart;
 
     if (modalBase)
         modalBase.textContent =
-            currentProduct.base;
-
-    if (modalPrice)
-        modalPrice.textContent =
-            currentPrice + " DH";
+            product.base;
 
     if (modalBottleName)
         modalBottleName.textContent =
-            currentProduct.shortName;
+            product.shortName;
 
     if (quantityValue)
         quantityValue.textContent =
-            quantity;
+            "1";
 
-
-    /* PHOTO DU PRODUIT DANS LE MODAL */
-
-    const modalImage =
-        document.getElementById("modalProductImage");
-
-    if (modalImage) {
-
-        modalImage.src =
-            getProductImage(currentProduct);
-
-        modalImage.alt =
-            currentProduct.name;
-
-    }
-
-
-    document.querySelectorAll(
-        ".size-btn"
-    ).forEach(button => {
-
-        const size =
-            Number(button.dataset.size);
-
-        let price;
-
-        if (size === 30) {
-            price =
-                currentProduct.price30;
-        }
-
-        if (size === 50) {
-            price =
-                currentProduct.price50;
-        }
-
-        if (size === 100) {
-            price =
-                currentProduct.price100;
-        }
-
-        button.dataset.price =
-            price;
-
-        button.classList.toggle(
-            "active",
-            size === 50
-        );
-
-        const strong =
-            button.querySelector("strong");
-
-        if (strong) {
-
-            strong.textContent =
-                price + " DH";
-
-        }
-
-    });
-
+    updateModalPrice();
 
     updateModalFavorite();
 
@@ -2448,15 +2330,18 @@ function openProduct(id) {
 
 function closeProduct() {
 
-    if (!modal) return;
+    if (modal) {
 
-    modal.classList.remove("open");
+        modal.classList.remove("open");
+
+    }
 
     document.body.classList.remove(
         "modal-open"
     );
 
 }
+
 
 if (modalClose) {
 
@@ -2466,6 +2351,7 @@ if (modalClose) {
     );
 
 }
+
 
 if (modalOverlay) {
 
@@ -2477,13 +2363,9 @@ if (modalOverlay) {
 }
 
 
-/* =====================================================
-   ESCAPE
-===================================================== */
-
 document.addEventListener(
     "keydown",
-    (event) => {
+    event => {
 
         if (
             event.key === "Escape"
@@ -2495,8 +2377,6 @@ document.addEventListener(
 
             closeSearch();
 
-            closeMobileMenu();
-
         }
 
     }
@@ -2507,65 +2387,90 @@ document.addEventListener(
    SIZE SELECTION
 ===================================================== */
 
-document.querySelectorAll(
-    ".size-btn"
-).forEach(button => {
+document
+    .querySelectorAll("[data-size]")
+    .forEach(button => {
 
-    button.addEventListener(
-        "click",
-        () => {
+        button.addEventListener(
+            "click",
+            () => {
 
-            document.querySelectorAll(
-                ".size-btn"
-            ).forEach(btn => {
+                document
+                    .querySelectorAll("[data-size]")
+                    .forEach(btn => {
 
-                btn.classList.remove(
-                    "active"
-                );
+                        btn.classList.remove(
+                            "active"
+                        );
 
-            });
+                    });
 
-            button.classList.add(
-                "active"
-            );
+                button.classList.add("active");
 
-            currentSize =
-                Number(
-                    button.dataset.size
-                );
+                currentSize =
+                    Number(
+                        button.dataset.size
+                    );
 
-            currentPrice =
-                Number(
-                    button.dataset.price
-                );
+                if (currentProduct) {
 
-            if (modalPrice) {
+                    if (currentSize === 30) {
+                        currentPrice =
+                            currentProduct.price30;
+                    }
 
-                modalPrice.textContent =
-                    currentPrice + " DH";
+                    if (currentSize === 50) {
+                        currentPrice =
+                            currentProduct.price50;
+                    }
+
+                    if (currentSize === 100) {
+                        currentPrice =
+                            currentProduct.price100;
+                    }
+
+                }
+
+                updateModalPrice();
 
             }
+        );
 
-        }
-    );
+    });
 
-});
+
+/* =====================================================
+   MODAL PRICE
+===================================================== */
+
+function updateModalPrice() {
+
+    if (!modalPrice) return;
+
+    modalPrice.textContent =
+        `${currentPrice} DH`;
+
+}
 
 
 /* =====================================================
    QUANTITY
 ===================================================== */
 
-const minusQty =
-    document.getElementById("minusQty");
+const quantityMinus =
+    document.getElementById(
+        "quantityMinus"
+    );
 
-const plusQty =
-    document.getElementById("plusQty");
+const quantityPlus =
+    document.getElementById(
+        "quantityPlus"
+    );
 
 
-if (minusQty) {
+if (quantityMinus) {
 
-    minusQty.addEventListener(
+    quantityMinus.addEventListener(
         "click",
         () => {
 
@@ -2573,14 +2478,9 @@ if (minusQty) {
 
                 quantity--;
 
-                if (quantityValue) {
-
-                    quantityValue.textContent =
-                        quantity;
-
-                }
-
             }
+
+            updateQuantity();
 
         }
     );
@@ -2588,27 +2488,34 @@ if (minusQty) {
 }
 
 
-if (plusQty) {
+if (quantityPlus) {
 
-    plusQty.addEventListener(
+    quantityPlus.addEventListener(
         "click",
         () => {
 
-            if (quantity < 10) {
+            if (quantity < 99) {
 
                 quantity++;
 
-                if (quantityValue) {
-
-                    quantityValue.textContent =
-                        quantity;
-
-                }
-
             }
+
+            updateQuantity();
 
         }
     );
+
+}
+
+
+function updateQuantity() {
+
+    if (quantityValue) {
+
+        quantityValue.textContent =
+            quantity;
+
+    }
 
 }
 
@@ -2619,7 +2526,9 @@ if (plusQty) {
 
 function toggleFavorite(id) {
 
-    if (favorites.includes(id)) {
+    if (
+        favorites.includes(id)
+    ) {
 
         favorites =
             favorites.filter(
@@ -2628,7 +2537,7 @@ function toggleFavorite(id) {
 
         showToast(
             "Retiré des favoris",
-            "La fragrance a été retirée."
+            "Le parfum a été retiré de vos favoris."
         );
 
     } else {
@@ -2637,10 +2546,12 @@ function toggleFavorite(id) {
 
         showToast(
             "Ajouté aux favoris",
-            "La fragrance a été sauvegardée."
+            "Le parfum a été ajouté à vos favoris."
         );
 
     }
+
+    saveFavorites();
 
     updateCounters();
 
@@ -2653,32 +2564,38 @@ function toggleFavorite(id) {
 }
 
 
+/* =====================================================
+   MODAL FAVORITE
+===================================================== */
+
 function updateModalFavorite() {
 
-    if (!currentProduct ||
-        !modalFavorite) return;
+    if (!modalFavorite) return;
 
-    const active =
+    if (
+        currentProduct &&
         favorites.includes(
             currentProduct.id
+        )
+    ) {
+
+        modalFavorite.classList.add(
+            "active"
         );
 
-    modalFavorite.classList.toggle(
-        "active",
-        active
-    );
+        modalFavorite.textContent =
+            "♥";
 
-    modalFavorite.innerHTML = `
+    } else {
 
-        <i class="
-            ${active
-                ? "fa-solid"
-                : "fa-regular"
-            }
-            fa-heart
-        "></i>
+        modalFavorite.classList.remove(
+            "active"
+        );
 
-    `;
+        modalFavorite.textContent =
+            "♡";
+
+    }
 
 }
 
@@ -2704,19 +2621,72 @@ if (modalFavorite) {
 
 
 /* =====================================================
-   CURRENT FILTER
+   ADD TO BAG
 ===================================================== */
 
-function getCurrentFilter() {
+const addToBag =
+    document.getElementById(
+        "addToBag"
+    );
 
-    const active =
-        document.querySelector(
-            ".filter-btn.active"
+
+if (addToBag) {
+
+    addToBag.addEventListener(
+        "click",
+        addCurrentProductToBag
+    );
+
+}
+
+
+function addCurrentProductToBag() {
+
+    if (!currentProduct) return;
+
+    const existing =
+        bag.find(
+            item =>
+                item.id === currentProduct.id &&
+                item.size === currentSize
         );
 
-    return active
-        ? active.dataset.filter
-        : "all";
+
+    if (existing) {
+
+        existing.quantity += quantity;
+
+    } else {
+
+        bag.push({
+
+            id: currentProduct.id,
+
+            name: currentProduct.name,
+
+            image: currentProduct.image,
+
+            size: currentSize,
+
+            price: currentPrice,
+
+            quantity: quantity
+
+        });
+
+    }
+
+
+    saveBag();
+
+    updateCounters();
+
+    updateBag();
+
+    showToast(
+        "Ajouté au panier",
+        `${currentProduct.name} a été ajouté.`
+    );
 
 }
 
@@ -2734,14 +2704,18 @@ function updateCounters() {
 
     }
 
-    const totalQuantity =
-        bag.reduce(
-            (sum, item) =>
-                sum + item.quantity,
-            0
-        );
-
     if (bagCount) {
+
+        const totalQuantity =
+            bag.reduce(
+                (
+                    total,
+                    item
+                ) =>
+                    total +
+                    item.quantity,
+                0
+            );
 
         bagCount.textContent =
             totalQuantity;
@@ -2752,396 +2726,24 @@ function updateCounters() {
 
 
 /* =====================================================
-   ADD TO BAG
+   BAG
 ===================================================== */
-
-const modalAdd =
-    document.getElementById("modalAdd");
-
-if (modalAdd) {
-
-    modalAdd.addEventListener(
-        "click",
-        function (event) {
-
-            event.preventDefault();
-            event.stopPropagation();
-
-            /* Vérification produit */
-
-            if (!currentProduct) {
-
-                console.warn(
-                    "ÉLIXIR : aucun produit sélectionné."
-                );
-
-                return;
-            }
-
-
-            /* Vérification des valeurs */
-
-            const selectedSize =
-                Number(currentSize) || 50;
-
-            const selectedPrice =
-                Number(currentPrice) || 0;
-
-            const selectedQuantity =
-                Number(quantity) || 1;
-
-
-            /* Cherche si le même parfum
-               et le même format existent déjà */
-
-            const existing =
-                bag.find(
-                    item =>
-                        item.id === currentProduct.id &&
-                        Number(item.size) === selectedSize
-                );
-
-
-            /* Ajout ou augmentation */
-
-            if (existing) {
-
-                existing.quantity +=
-                    selectedQuantity;
-
-            } else {
-
-                bag.push({
-
-                    id:
-                        currentProduct.id,
-
-                    name:
-                        currentProduct.name,
-
-                    size:
-                        selectedSize,
-
-                    price:
-                        selectedPrice,
-
-                    quantity:
-                        selectedQuantity
-
-                });
-
-            }
-
-
-            /* Mise à jour */
-
-            updateCounters();
-
-            updateBag();
-
-
-            /* Message */
-
-            showToast(
-                "Ajouté à votre sélection",
-                `${currentProduct.name} — ${selectedSize} ML`
-            );
-
-
-            /* Fermer le produit */
-
-            closeProduct();
-
-        }
-    );
-
-}
-
-   /* =====================================================
-   FIX — EMPÊCHER LE CLIC DE REMONTER VERS LA CARTE
-===================================================== */
-
-if (modalAdd) {
-
-    modalAdd.addEventListener(
-        "mousedown",
-        function (event) {
-            event.stopPropagation();
-        }
-    );
-
-    modalAdd.addEventListener(
-        "pointerdown",
-        function (event) {
-            event.stopPropagation();
-        }
-    );
-
-}
-
-/* =====================================================
-   UPDATE BAG
-===================================================== */
-
-/* =====================================================
-   UPDATE BAG — VERSION CORRIGÉE
-===================================================== */
-
-function updateBag() {
-
-    if (bag.length === 0) {
-
-        bagItems.innerHTML = `
-
-            <div class="empty-bag">
-
-                <i class="fa-solid fa-spray-can-sparkles"></i>
-
-                <h4>
-                    Votre sélection est vide
-                </h4>
-
-                <p>
-                    Ajoutez vos fragrances préférées
-                    pour préparer votre commande.
-                </p>
-
-                <button
-                    class="btn btn-gold"
-                    id="emptyBagBtn"
-                >
-                    Découvrir les parfums
-                </button>
-
-            </div>
-
-        `;
-
-        const emptyButton =
-            document.getElementById("emptyBagBtn");
-
-        if (emptyButton) {
-
-            emptyButton.addEventListener(
-                "click",
-                () => {
-
-                    closeBag();
-
-                    const collection =
-                        document.getElementById("collection");
-
-                    if (collection) {
-
-                        collection.scrollIntoView({
-                            behavior: "smooth"
-                        });
-
-                    }
-
-                }
-            );
-
-        }
-
-    } else {
-
-        bagItems.innerHTML = "";
-
-        bag.forEach((item, index) => {
-
-            const product =
-                products.find(
-                    p => p.id === item.id
-                );
-
-            if (!product) return;
-
-            /*
-             * Image du parfum.
-             *
-             * Ton objet product doit contenir :
-             *
-             * image: "nom-du-fichier.jpg"
-             *
-             */
-
-            const image =
-                product.image || "";
-
-            const itemElement =
-                document.createElement("div");
-
-            itemElement.className =
-                "bag-item";
-
-            itemElement.innerHTML = `
-
-                <div class="bag-item-image">
-
-                    ${
-                        image
-                        ?
-                        `
-                        <img
-                            src="${image}"
-                            alt="${product.name}"
-                            loading="lazy"
-                        >
-                        `
-                        :
-                        `
-                        <div class="bag-image-placeholder">
-                            <i class="fa-solid fa-spray-can-sparkles"></i>
-                        </div>
-                        `
-                    }
-
-                </div>
-
-
-                <div class="bag-item-info">
-
-                    <span class="bag-item-category">
-                        ${product.categoryLabel || ""}
-                    </span>
-
-                    <h4>
-                        ${item.name}
-                    </h4>
-
-                    <span class="bag-item-size">
-                        ${item.size} ML × ${item.quantity}
-                    </span>
-
-                    <button
-                        class="bag-item-remove"
-                        data-index="${index}"
-                    >
-                        <i class="fa-solid fa-trash-can"></i>
-                        Supprimer
-                    </button>
-
-                </div>
-
-
-                <div class="bag-item-price">
-
-                    ${item.price * item.quantity} DH
-
-                </div>
-
-            `;
-
-            bagItems.appendChild(itemElement);
-
-        });
-
-
-        /*
-         * SUPPRESSION DES ARTICLES
-         */
-
-        document.querySelectorAll(
-            ".bag-item-remove"
-        ).forEach(button => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    const index =
-                        Number(
-                            button.dataset.index
-                        );
-
-                    bag.splice(index, 1);
-
-                    updateCounters();
-
-                    updateBag();
-
-                }
-            );
-
-        });
-
-    }
-
-
-    /*
-     * TOTAL
-     */
-
-    const total =
-        bag.reduce(
-            (sum, item) =>
-                sum +
-                item.price *
-                item.quantity,
-            0
-        );
-
-    bagTotal.textContent =
-        total + " DH";
-
-}
-
-
-/* =====================================================
-   OPEN BAG
-===================================================== */
-
-function openBag() {
-
-    updateBag();
-
-    if (bagDrawer) {
-
-        bagDrawer.classList.add("open");
-
-    }
-
-    if (drawerOverlay) {
-
-        drawerOverlay.classList.add("open");
-
-    }
-
-    document.body.classList.add(
-        "drawer-open"
-    );
-
-}
-
-
-function closeBag() {
-
-    if (bagDrawer) {
-
-        bagDrawer.classList.remove(
-            "open"
-        );
-
-    }
-
-    if (drawerOverlay) {
-
-        drawerOverlay.classList.remove(
-            "open"
-        );
-
-    }
-
-    document.body.classList.remove(
-        "drawer-open"
-    );
-
-}
-
 
 const bagBtn =
-    document.getElementById("bagBtn");
+    document.getElementById(
+        "bagBtn"
+    );
+
+const bagClose =
+    document.getElementById(
+        "bagClose"
+    );
+
+const drawerWhatsapp =
+    document.getElementById(
+        "drawerWhatsapp"
+    );
+
 
 if (bagBtn) {
 
@@ -3153,12 +2755,9 @@ if (bagBtn) {
 }
 
 
-const drawerClose =
-    document.getElementById("drawerClose");
+if (bagClose) {
 
-if (drawerClose) {
-
-    drawerClose.addEventListener(
+    bagClose.addEventListener(
         "click",
         closeBag
     );
@@ -3176,6 +2775,308 @@ if (drawerOverlay) {
 }
 
 
+function openBag() {
+
+    if (!bagDrawer) return;
+
+    bagDrawer.classList.add(
+        "open"
+    );
+
+    document.body.classList.add(
+        "bag-open"
+    );
+
+    updateBag();
+
+}
+
+
+function closeBag() {
+
+    if (!bagDrawer) return;
+
+    bagDrawer.classList.remove(
+        "open"
+    );
+
+    document.body.classList.remove(
+        "bag-open"
+    );
+
+}
+
+
+/* =====================================================
+   UPDATE BAG
+===================================================== */
+
+function updateBag() {
+
+    if (!bagItems) return;
+
+    if (bag.length === 0) {
+
+        bagItems.innerHTML = `
+
+            <div class="empty-bag">
+
+                <div class="empty-bag-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Votre panier est vide
+                </h3>
+
+                <p>
+                    Découvrez notre collection
+                    et ajoutez vos parfums préférés.
+                </p>
+
+            </div>
+
+        `;
+
+        if (bagTotal)
+            bagTotal.textContent =
+                "0 DH";
+
+        return;
+
+    }
+
+
+    bagItems.innerHTML = "";
+
+
+    bag.forEach(
+        (item, index) => {
+
+            const itemElement =
+                document.createElement(
+                    "div"
+                );
+
+            itemElement.className =
+                "bag-item";
+
+
+            itemElement.innerHTML = `
+
+                <div class="bag-item-image">
+
+                    <img
+                        src="${IMAGE_PATH + item.image}"
+                        alt="${item.name}"
+                        onerror="this.style.display='none';"
+                    >
+
+                </div>
+
+
+                <div class="bag-item-info">
+
+                    <h4>
+                        ${item.name}
+                    </h4>
+
+                    <span>
+                        ${item.size} ML
+                    </span>
+
+                    <strong>
+                        ${item.price} DH
+                    </strong>
+
+
+                    <div class="bag-item-controls">
+
+                        <button
+                            data-bag-minus="${index}"
+                        >
+                            −
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            data-bag-plus="${index}"
+                        >
+                            +
+                        </button>
+
+                        <button
+                            class="bag-remove"
+                            data-bag-remove="${index}"
+                        >
+                            Supprimer
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            bagItems.appendChild(
+                itemElement
+            );
+
+        }
+    );
+
+
+    /* MINUS */
+
+    bagItems
+        .querySelectorAll(
+            "[data-bag-minus]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const index =
+                        Number(
+                            button.dataset.bagMinus
+                        );
+
+                    if (
+                        bag[index]
+                    ) {
+
+                        bag[index].quantity--;
+
+                        if (
+                            bag[index].quantity <= 0
+                        ) {
+
+                            bag.splice(
+                                index,
+                                1
+                            );
+
+                        }
+
+                    }
+
+                    saveBag();
+
+                    updateCounters();
+
+                    updateBag();
+
+                }
+            );
+
+        });
+
+
+    /* PLUS */
+
+    bagItems
+        .querySelectorAll(
+            "[data-bag-plus]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const index =
+                        Number(
+                            button.dataset.bagPlus
+                        );
+
+                    if (
+                        bag[index]
+                    ) {
+
+                        bag[index].quantity++;
+
+                    }
+
+                    saveBag();
+
+                    updateCounters();
+
+                    updateBag();
+
+                }
+            );
+
+        });
+
+
+    /* REMOVE */
+
+    bagItems
+        .querySelectorAll(
+            "[data-bag-remove]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const index =
+                        Number(
+                            button.dataset.bagRemove
+                        );
+
+                    bag.splice(
+                        index,
+                        1
+                    );
+
+                    saveBag();
+
+                    updateCounters();
+
+                    updateBag();
+
+                    showToast(
+                        "Supprimé",
+                        "Le parfum a été retiré du panier."
+                    );
+
+                }
+            );
+
+        });
+
+
+    const total =
+        bag.reduce(
+            (
+                sum,
+                item
+            ) =>
+                sum +
+                item.price *
+                item.quantity,
+            0
+        );
+
+
+    if (bagTotal) {
+
+        bagTotal.textContent =
+            `${total} DH`;
+
+    }
+
+}
+
+
 /* =====================================================
    WHATSAPP ORDER
 ===================================================== */
@@ -3183,6 +3084,7 @@ if (drawerOverlay) {
 function sendWhatsAppOrder() {
 
     if (!WHATSAPP_NUMBER) return;
+
 
     let message =
         "Bonjour ÉLIXIR 👋\n\n";
@@ -3194,7 +3096,9 @@ function sendWhatsAppOrder() {
     if (
         currentProduct &&
         modal &&
-        modal.classList.contains("open")
+        modal.classList.contains(
+            "open"
+        )
     ) {
 
         message +=
@@ -3221,36 +3125,45 @@ function sendWhatsAppOrder() {
 
         } else {
 
-            bag.forEach(item => {
+            bag.forEach(
+                item => {
 
-                const product =
-                    products.find(
-                        p => p.id === item.id
-                    );
-
-                message +=
-                    `• ${item.name}`;
-
-                if (product) {
+                    const product =
+                        products.find(
+                            p =>
+                                p.id ===
+                                item.id
+                        );
 
                     message +=
-                        ` — Réf. ${product.catalogue}`;
+                        `• ${item.name}`;
+
+                    if (product) {
+
+                        message +=
+                            ` — Réf. ${product.catalogue}`;
+
+                    }
+
+                    message +=
+                        ` — ${item.size} ML × ${item.quantity} — ${item.price * item.quantity} DH\n`;
 
                 }
+            );
 
-                message +=
-                    ` — ${item.size} ML × ${item.quantity} — ${item.price * item.quantity} DH\n`;
-
-            });
 
             const total =
                 bag.reduce(
-                    (sum, item) =>
+                    (
+                        sum,
+                        item
+                    ) =>
                         sum +
                         item.price *
                         item.quantity,
                     0
                 );
+
 
             message +=
                 `\nTotal estimé : ${total} DH`;
@@ -3263,6 +3176,7 @@ function sendWhatsAppOrder() {
     const url =
         `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
+
     window.open(
         url,
         "_blank"
@@ -3271,14 +3185,11 @@ function sendWhatsAppOrder() {
 }
 
 
-/* =====================================================
-   WHATSAPP BUTTONS
-===================================================== */
-
 const whatsappOrder =
     document.getElementById(
         "whatsappOrder"
     );
+
 
 if (whatsappOrder) {
 
@@ -3289,11 +3200,6 @@ if (whatsappOrder) {
 
 }
 
-
-const drawerWhatsapp =
-    document.getElementById(
-        "drawerWhatsapp"
-    );
 
 if (drawerWhatsapp) {
 
@@ -3319,6 +3225,7 @@ function showToast(
 
     if (!toast) return;
 
+
     const strong =
         toast.querySelector(
             "strong"
@@ -3329,17 +3236,32 @@ function showToast(
             "span"
         );
 
-    if (strong)
+
+    if (strong) {
+
         strong.textContent =
             title;
 
-    if (span)
+    }
+
+
+    if (span) {
+
         span.textContent =
             message;
 
-    toast.classList.add("show");
+    }
 
-    clearTimeout(toastTimer);
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        toastTimer
+    );
+
 
     toastTimer =
         setTimeout(
@@ -3400,8 +3322,9 @@ function openSearch() {
     );
 
     document.body.classList.add(
-        "modal-open"
+        "search-open"
     );
+
 
     setTimeout(
         () => {
@@ -3413,7 +3336,7 @@ function openSearch() {
             }
 
         },
-        300
+        100
     );
 
 }
@@ -3428,23 +3351,15 @@ function closeSearch() {
     );
 
     document.body.classList.remove(
-        "modal-open"
+        "search-open"
     );
-
-    if (searchInput) {
-
-        searchInput.value = "";
-
-    }
-
-    if (searchResults) {
-
-        searchResults.innerHTML = "";
-
-    }
 
 }
 
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
 
 if (searchInput) {
 
@@ -3457,10 +3372,24 @@ if (searchInput) {
                     .trim()
                     .toLowerCase();
 
+
+            if (!searchResults) return;
+
+
             if (!query) {
 
-                searchResults.innerHTML =
-                    "";
+                searchResults.innerHTML = `
+
+                    <div class="search-empty">
+
+                        <p>
+                            Recherchez un parfum,
+                            une marque ou une référence.
+                        </p>
+
+                    </div>
+
+                `;
 
                 return;
 
@@ -3474,15 +3403,11 @@ if (searchInput) {
                         const content =
                             `
                             ${product.name}
-                            ${product.category}
+                            ${product.shortName}
                             ${product.categoryLabel}
                             ${product.catalogue}
                             ${product.tagline}
-                            ${product.top}
-                            ${product.heart}
-                            ${product.base}
-                            `
-                            .toLowerCase();
+                            `.toLowerCase();
 
                         return content.includes(
                             query
@@ -3496,15 +3421,11 @@ if (searchInput) {
 
                 searchResults.innerHTML = `
 
-                    <div class="search-result">
+                    <div class="search-empty">
 
-                        <span>
-                            Aucun parfum trouvé
-                        </span>
-
-                        <small>
-                            Essayez un autre terme
-                        </small>
+                        <p>
+                            Aucun parfum trouvé.
+                        </p>
 
                     </div>
 
@@ -3516,49 +3437,68 @@ if (searchInput) {
 
 
             searchResults.innerHTML =
-                results.map(
-                    product => `
+                results
+                    .map(
+                        product => `
 
-                        <div
-                            class="search-result"
-                            data-search-id="${product.id}"
-                        >
+                            <button
+                                class="search-result"
+                                data-search-product="${product.id}"
+                            >
 
-                            <span>
-                                ${product.name}
-                            </span>
+                                <div class="search-result-image">
 
-                            <small>
-                                Réf. ${product.catalogue}
-                                ·
-                                ${product.categoryLabel}
-                            </small>
+                                    <img
+                                        src="${getProductImage(product)}"
+                                        alt="${product.name}"
+                                        onerror="this.style.display='none';"
+                                    >
 
-                        </div>
+                                </div>
 
-                    `
-                ).join("");
+                                <div>
+
+                                    <span>
+                                        ${product.categoryLabel}
+                                    </span>
+
+                                    <strong>
+                                        ${product.name}
+                                    </strong>
+
+                                    <small>
+                                        À partir de ${product.price30} DH
+                                    </small>
+
+                                </div>
+
+                            </button>
+
+                        `
+                    )
+                    .join("");
 
 
-            document.querySelectorAll(
-                "[data-search-id]"
-            ).forEach(result => {
+            searchResults
+                .querySelectorAll(
+                    "[data-search-product]"
+                )
+                .forEach(button => {
 
-                result.addEventListener(
-                    "click",
-                    () => {
+                    button.addEventListener(
+                        "click",
+                        () => {
 
-                        const id =
-                            result.dataset.searchId;
+                            closeSearch();
 
-                        closeSearch();
+                            openProduct(
+                                button.dataset.searchProduct
+                            );
 
-                        openProduct(id);
+                        }
+                    );
 
-                    }
-                );
-
-            });
+                });
 
         }
     );
@@ -3570,77 +3510,176 @@ if (searchInput) {
    MOBILE MENU
 ===================================================== */
 
-const mobileMenuBtn =
+const mobileMenuButton =
     document.getElementById(
-        "mobileMenuBtn"
+        "mobileMenuButton"
     );
 
-const mobileClose =
+const mobileMenuClose =
     document.getElementById(
-        "mobileClose"
+        "mobileMenuClose"
     );
 
 
-function openMobileMenu() {
+if (mobileMenuButton) {
 
-    if (!mobileMenu) return;
-
-    mobileMenu.classList.add(
-        "open"
-    );
-
-    document.body.classList.add(
-        "menu-open"
-    );
-
-}
-
-
-function closeMobileMenu() {
-
-    if (!mobileMenu) return;
-
-    mobileMenu.classList.remove(
-        "open"
-    );
-
-    document.body.classList.remove(
-        "menu-open"
-    );
-
-}
-
-
-if (mobileMenuBtn) {
-
-    mobileMenuBtn.addEventListener(
+    mobileMenuButton.addEventListener(
         "click",
-        openMobileMenu
+        () => {
+
+            if (!mobileMenu) return;
+
+            mobileMenu.classList.add(
+                "open"
+            );
+
+        }
     );
 
 }
 
 
-if (mobileClose) {
+if (mobileMenuClose) {
 
-    mobileClose.addEventListener(
+    mobileMenuClose.addEventListener(
         "click",
-        closeMobileMenu
+        () => {
+
+            if (!mobileMenu) return;
+
+            mobileMenu.classList.remove(
+                "open"
+            );
+
+        }
     );
 
 }
 
 
-document.querySelectorAll(
-    ".mobile-menu nav a"
-).forEach(link => {
+if (mobileMenu) {
 
-    link.addEventListener(
-        "click",
-        closeMobileMenu
-    );
+    mobileMenu
+        .querySelectorAll("a")
+        .forEach(link => {
 
-});
+            link.addEventListener(
+                "click",
+                () => {
+
+                    mobileMenu.classList.remove(
+                        "open"
+                    );
+
+                }
+            );
+
+        });
+
+}
+
+
+/* =====================================================
+   SMOOTH ANCHOR LINKS
+===================================================== */
+
+document
+    .querySelectorAll(
+        'a[href^="#"]'
+    )
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            event => {
+
+                const targetId =
+                    link.getAttribute(
+                        "href"
+                    );
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+                    return;
+                }
+
+
+                const target =
+                    document.querySelector(
+                        targetId
+                    );
+
+
+                if (!target) return;
+
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+        );
+
+    });
+
+
+/* =====================================================
+   PARALLAX HERO
+===================================================== */
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        const heroBottle =
+            document.querySelector(
+                ".hero-bottle"
+            );
+
+
+        if (
+            heroBottle &&
+            window.scrollY <
+            window.innerHeight
+        ) {
+
+            heroBottle.style.transform =
+                `translateY(${window.scrollY * 0.08}px)`;
+
+        }
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+/* =====================================================
+   PREVENT IMAGE DRAG
+===================================================== */
+
+document.addEventListener(
+    "dragstart",
+    event => {
+
+        if (
+            event.target.tagName ===
+            "IMG"
+        ) {
+
+            event.preventDefault();
+
+        }
+
+    }
+);
 
 
 /* =====================================================
@@ -3678,19 +3717,21 @@ if (
 
             },
             {
-                threshold: .12
+                threshold: 0.12
             }
         );
 
 
-    document.querySelectorAll(
-        ".reveal"
-    ).forEach(
-        element =>
-            revealObserver.observe(
-                element
-            )
-    );
+    document
+        .querySelectorAll(
+            ".reveal"
+        )
+        .forEach(
+            element =>
+                revealObserver.observe(
+                    element
+                )
+        );
 
 }
 
@@ -3704,103 +3745,6 @@ renderProducts();
 updateCounters();
 
 updateBag();
-
-
-/* =====================================================
-   SMOOTH ANCHOR LINKS
-===================================================== */
-
-document.querySelectorAll(
-    'a[href^="#"]'
-).forEach(link => {
-
-    link.addEventListener(
-        "click",
-        event => {
-
-            const targetId =
-                link.getAttribute(
-                    "href"
-                );
-
-            if (
-                targetId === "#"
-            ) {
-
-                return;
-
-            }
-
-            const target =
-                document.querySelector(
-                    targetId
-                );
-
-            if (!target) return;
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }
-    );
-
-});
-
-
-/* =====================================================
-   PARALLAX HERO
-===================================================== */
-
-window.addEventListener(
-    "scroll",
-    () => {
-
-        const scroll =
-            window.scrollY;
-
-        const heroBottle =
-            document.querySelector(
-                ".hero-bottle"
-            );
-
-        if (
-            heroBottle &&
-            scroll < window.innerHeight
-        ) {
-
-            heroBottle.style.transform =
-                `translateY(${scroll * .08}px)`;
-
-        }
-
-    },
-    {
-        passive: true
-    }
-);
-
-
-/* =====================================================
-   PREVENT IMAGE-LIKE DRAG
-===================================================== */
-
-document.addEventListener(
-    "dragstart",
-    event => {
-
-        if (
-            event.target.tagName === "IMG"
-        ) {
-
-            event.preventDefault();
-
-        }
-
-    }
-);
 
 
 /* =====================================================
