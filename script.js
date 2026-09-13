@@ -1823,7 +1823,7 @@ const PRICES = {
     eau: {
         30: 50,
         50: 70,
-        100: 120
+        100: 135
     },
 
     extrait: {
@@ -4026,7 +4026,7 @@ console.log(
 );
 
 console.log(
-    "Tarifs EDP : 30ml 50 DH · 50ml 70 DH · 100ml 120 DH"
+    "Tarifs EDP : 30ml 50 DH · 50ml 70 DH · 100ml 135 DH"
 );
 
 console.log(
