@@ -3298,7 +3298,7 @@ if (drawerOverlay) {
 
 function sendWhatsAppOrder() {
 
-    if (!WHATSAPP_NUMBER) return;
+    if (212712700527) return;
 
 
     let message =
@@ -3407,7 +3407,7 @@ function sendWhatsAppOrder() {
 
 
     const url =
-        `https://wa.me/${0712700527}?text=${encodeURIComponent(message)}`;
+        `https://wa.me/${212712700527}?text=${encodeURIComponent(message)}`;
 
 
     window.open(
