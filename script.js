@@ -1787,8 +1787,41 @@ const products = [
         price100: 850,
         badge: "EXCLUSIF",
         color: "amber"
-    }
+    },
 
+    {
+        id: "P01",
+        catalogue: "PACK-01",
+        name: "Pack 3 Parfums",
+        shortName: "PACK 3",
+        category: "pack",
+        categoryLabel: "PACK",
+        tagline: "1 Extrait + 2 Eaux de Parfum",
+        description: "Composez votre pack avec 1 Extrait de Parfum et 2 Eaux de Parfum au choix.",
+        price: 200,
+        badge: "BEST-SELLER",
+        packType: "three",
+        selectionCount: 3,
+        extraitCount: 1,
+        eauCount: 2
+    },
+
+    {
+        id: "P02",
+        catalogue: "PACK-02",
+        name: "Pack 6 Parfums",
+        shortName: "PACK 6",
+        category: "pack",
+        categoryLabel: "PACK",
+        tagline: "2 Extraits + 4 Eaux de Parfum",
+        description: "Composez votre pack avec 2 Extraits de Parfum et 4 Eaux de Parfum au choix.",
+        price: 400,
+        badge: "MEILLEURE OFFRE",
+        packType: "six",
+        selectionCount: 6,
+        extraitCount: 2,
+        eauCount: 4
+    }
 ];
 
 
