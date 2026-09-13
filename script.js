@@ -9,7 +9,7 @@
    CONFIGURATION
 ===================================================== */
 
-const WHATSAPP_NUMBER = "212600000000";
+const WHATSAPP_NUMBER = "212712700527";
 
 const IMAGE_PATH = "";
 
