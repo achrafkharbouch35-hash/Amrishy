@@ -5149,3 +5149,303 @@ footer {
         object-fit: cover !important;
     }
 }
+/* =====================================================
+   ÉLIXIR — VRAI FLACON ARGENTÉ
+===================================================== */
+
+.real-perfume-bottle {
+    position: relative;
+
+    width: 360px;
+    height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
+
+    animation:
+        realBottleFloat 5.5s
+        ease-in-out
+        infinite;
+
+    filter:
+        drop-shadow(
+            0 35px 35px
+            rgba(0,0,0,.70)
+        );
+}
+
+
+/* IMAGE RÉELLE DU FLACON */
+
+.real-bottle-image {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    user-select: none;
+    pointer-events: none;
+
+    -webkit-user-drag: none;
+
+    transform-origin: center center;
+
+    animation:
+        realBottleBreath 5.5s
+        ease-in-out
+        infinite;
+}
+
+
+/* LUMIÈRE DERRIÈRE LE FLACON */
+
+.real-perfume-bottle::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.20) 0%,
+            rgba(214,173,99,.15) 30%,
+            rgba(214,173,99,.06) 50%,
+            transparent 72%
+        );
+
+    filter: blur(25px);
+
+    z-index: -2;
+
+    animation:
+        bottleAura 4.5s
+        ease-in-out
+        infinite;
+}
+
+
+/* REFLET DE LUMIÈRE */
+
+.bottle-light {
+
+    position: absolute;
+
+    width: 55px;
+    height: 430px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(14deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.18),
+            rgba(255,255,255,.45),
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+    filter: blur(10px);
+
+    opacity: .35;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    animation:
+        bottleReflection 4s
+        ease-in-out
+        infinite;
+}
+
+
+/* =====================================================
+   ANIMATION PRINCIPALE
+===================================================== */
+
+@keyframes realBottleFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-2deg)
+            scale(1);
+    }
+
+    25% {
+        transform:
+            translateY(-10px)
+            rotate(-1deg)
+            scale(1.015);
+    }
+
+    50% {
+        transform:
+            translateY(-24px)
+            rotate(2deg)
+            scale(1.025);
+    }
+
+    75% {
+        transform:
+            translateY(-10px)
+            rotate(1deg)
+            scale(1.015);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(-2deg)
+            scale(1);
+    }
+
+}
+
+
+/* PETIT MOUVEMENT DU FLACON */
+
+@keyframes realBottleBreath {
+
+    0%,100% {
+        transform:
+            scale(1)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            scale(1.018)
+            rotate(.5deg);
+    }
+
+}
+
+
+/* HALO */
+
+@keyframes bottleAura {
+
+    0%,100% {
+        opacity: .45;
+        transform:
+            translate(-50%, -50%)
+            scale(.90);
+    }
+
+    50% {
+        opacity: .85;
+        transform:
+            translate(-50%, -50%)
+            scale(1.08);
+    }
+
+}
+
+
+/* REFLET QUI PASSE */
+
+@keyframes bottleReflection {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(-160%, -50%)
+            rotate(14deg);
+    }
+
+    25% {
+        opacity: .15;
+    }
+
+    50% {
+        opacity: .50;
+    }
+
+    75% {
+        opacity: .15;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(160%, -50%)
+            rotate(14deg);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .real-perfume-bottle {
+
+        width: 300px;
+        height: 480px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .real-perfume-bottle {
+
+        width: 240px;
+        height: 400px;
+
+        margin-top: 10px;
+
+    }
+
+    .real-perfume-bottle::before {
+
+        width: 260px;
+        height: 260px;
+
+    }
+
+    .bottle-light {
+
+        width: 35px;
+        height: 300px;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .real-perfume-bottle {
+
+        width: 210px;
+        height: 350px;
+
+    }
+
+}
