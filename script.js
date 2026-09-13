@@ -2066,43 +2066,18 @@ if (cursor && follower) {
 /* =====================================================
    PRODUCT IMAGE HTML
 ===================================================== */
-
 function bottleHTML(product) {
-
     return `
-
-        <div class="product-bottle">
-
-            <div class="product-cap"></div>
-
-            <div class="product-neck"></div>
-
-            <div class="product-body">
-
-                <img
-                    src="${getProductImage(product)}"
-                    alt="${product.name}"
-                    class="perfume-image"
-                    loading="lazy"
-                    onerror="this.style.display='none';"
-                >
-
-                <div class="product-label">
-
-                    <small>ÉLIXIR</small>
-
-                    <strong>
-                        ${product.shortName}
-                    </strong>
-
-                </div>
-
-            </div>
-
+        <div class="product-image-wrapper">
+            <img 
+                src="${getProductImage(product)}"
+                alt="${product.name}"
+                class="product-real-image"
+                loading="lazy"
+                onerror="this.style.display='none';"
+            >
         </div>
-
     `;
-
 }
 
 
