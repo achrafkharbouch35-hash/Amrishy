@@ -3293,23 +3293,35 @@ if (drawerOverlay) {
 
 
 /* =====================================================
-   WHATSAPP ORDER
+   WHATSAPP ORDER — CORRIGÉ
 ===================================================== */
 
 function sendWhatsAppOrder() {
 
-    if (212712700527) return;
+    // Utilise TOUJOURS le numéro défini en haut du script
+    const number = WHATSAPP_NUMBER
+        .toString()
+        .replace(/\D/g, "");
+
+    if (!number) {
+
+        showToast(
+            "Erreur WhatsApp",
+            "Le numéro WhatsApp est invalide."
+        );
+
+        return;
+    }
 
 
     let message =
         "Bonjour AMRISHY 👋\n\n";
 
-
     message +=
         "Je souhaite commander :\n\n";
 
 
-    /* ================================================
+    /* =================================================
        COMMANDE DEPUIS LA FICHE PRODUIT
     ================================================= */
 
@@ -3342,7 +3354,8 @@ function sendWhatsAppOrder() {
 
     }
 
-    /* ================================================
+
+    /* =================================================
        COMMANDE DEPUIS LE PANIER
     ================================================= */
 
@@ -3359,31 +3372,33 @@ function sendWhatsAppOrder() {
 
                 const product =
                     products.find(
-                        p =>
-                            p.id === item.id
+                        p => p.id === item.id
                     );
 
 
                 message +=
-                    `• ${item.name}`;
+                    `• ${item.name}\n`;
 
 
                 if (product) {
 
                     message +=
-                        ` — Réf. ${product.catalogue}`;
+                        `Référence : ${product.catalogue}\n`;
 
                     message +=
-                        ` — ${getProductTypeLabel(product)}`;
+                        `Type : ${getProductTypeLabel(product)}\n`;
 
                 }
 
 
                 message +=
-                    ` — ${item.size} ML × ${item.quantity}`;
+                    `Format : ${item.size} ML\n`;
 
                 message +=
-                    ` — ${item.price * item.quantity} DH\n`;
+                    `Quantité : ${item.quantity}\n`;
+
+                message +=
+                    `Prix : ${item.price * item.quantity} DH\n\n`;
 
             });
 
@@ -3399,15 +3414,19 @@ function sendWhatsAppOrder() {
 
 
             message +=
-                `\nTotal estimé : ${total} DH`;
+                `Total estimé : ${total} DH`;
 
         }
 
     }
 
 
+    /* =================================================
+       OUVERTURE WHATSAPP
+    ================================================= */
+
     const url =
-        `https://wa.me/${212712700527}?text=${encodeURIComponent(message)}`;
+        `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 
 
     window.open(
@@ -3416,43 +3435,6 @@ function sendWhatsAppOrder() {
     );
 
 }
-
-
-/* =====================================================
-   WHATSAPP BUTTONS
-===================================================== */
-
-const whatsappOrder =
-    document.getElementById(
-        "whatsappOrder"
-    );
-
-
-if (whatsappOrder) {
-
-    whatsappOrder.addEventListener(
-        "click",
-        sendWhatsAppOrder
-    );
-
-}
-
-
-const drawerWhatsapp =
-    document.getElementById(
-        "drawerWhatsapp"
-    );
-
-
-if (drawerWhatsapp) {
-
-    drawerWhatsapp.addEventListener(
-        "click",
-        sendWhatsAppOrder
-    );
-
-}
-
 
 /* =====================================================
    TOAST
