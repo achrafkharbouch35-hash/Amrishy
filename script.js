@@ -16,7 +16,7 @@ const WHATSAPP_NUMBER = "212600000000";
    DOSSIER DES IMAGES
 ===================================================== */
 
-const IMAGE_PATH = "images/parfums/";
+const IMAGE_PATH = "";
 
 
 /* =====================================================
