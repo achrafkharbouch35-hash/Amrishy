@@ -1812,17 +1812,109 @@ function getProductImage(product) {
    STATE
 ===================================================== */
 
+/* =====================================================
+   STATE
+===================================================== */
+
 let currentProduct = null;
 
 let currentSize = 50;
 
-let currentPrice = 640;
+let currentPrice = 70;
 
 let quantity = 1;
 
 let bag = [];
 
 let favorites = [];
+
+
+/* =====================================================
+   TARIFS ÉLIXIR
+===================================================== */
+
+/*
+   EAU DE PARFUM
+   30 ML  = 50 DH
+   50 ML  = 70 DH
+   100 ML = 120 DH
+
+   EXTRAIT DE PARFUM
+   30 ML  = 150 DH
+   50 ML  = 170 DH
+   100 ML = 320 DH
+*/
+
+const PRICES = {
+
+    eau: {
+        30: 50,
+        50: 70,
+        100: 120
+    },
+
+    extrait: {
+        30: 150,
+        50: 170,
+        100: 320
+    }
+
+};
+
+
+/* =====================================================
+   TYPE DE PARFUM
+===================================================== */
+
+/*
+   Par défaut, tous les parfums sont considérés
+   comme des Eaux de Parfum.
+
+   Pour mettre un parfum en EXTRAIT,
+   ajoute simplement :
+
+   type: "extrait",
+
+   dans son produit.
+
+   Exemple :
+
+   {
+       id: "F01",
+       ...
+       type: "extrait",
+       ...
+   }
+*/
+
+function getProductType(product) {
+
+    if (
+        product &&
+        product.type === "extrait"
+    ) {
+
+        return "extrait";
+
+    }
+
+    return "eau";
+
+}
+
+
+/* =====================================================
+   PRIX AUTOMATIQUE
+===================================================== */
+
+function getProductPrice(product, size) {
+
+    const type =
+        getProductType(product);
+
+    return PRICES[type][size];
+
+}
 
 
 /* =====================================================
@@ -2312,10 +2404,13 @@ function openProduct(id) {
 
     if (!currentProduct) return;
 
-    currentSize = 50;
+   currentSize = 50;
 
-    currentPrice =
-        currentProduct.price50;
+currentPrice =
+    getProductPrice(
+        currentProduct,
+        currentSize
+    );
 
     quantity = 1;
 
@@ -2384,22 +2479,11 @@ function openProduct(id) {
         const size =
             Number(button.dataset.size);
 
-        let price;
-
-        if (size === 30) {
-            price =
-                currentProduct.price30;
-        }
-
-        if (size === 50) {
-            price =
-                currentProduct.price50;
-        }
-
-        if (size === 100) {
-            price =
-                currentProduct.price100;
-        }
+       let price =
+    getProductPrice(
+        currentProduct,
+        size
+    );
 
         button.dataset.price =
             price;
