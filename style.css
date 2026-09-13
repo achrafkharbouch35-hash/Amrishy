@@ -5403,8 +5403,8 @@ footer {
 
     .real-perfume-bottle {
 
-        width: 300px;
-        height: 480px;
+        width: 340px;
+        height: 530px;
 
     }
 
@@ -5415,8 +5415,8 @@ footer {
 
     .real-perfume-bottle {
 
-        width: 240px;
-        height: 400px;
+        width: 340px;
+        height: 530px;
 
         margin-top: 10px;
 
@@ -5424,15 +5424,15 @@ footer {
 
     .real-perfume-bottle::before {
 
-        width: 260px;
-        height: 260px;
+        width: 340px;
+        height: 530px;
 
     }
 
     .bottle-light {
 
-        width: 35px;
-        height: 300px;
+        width: 34px;
+        height: 530px;
 
     }
 
@@ -5443,8 +5443,8 @@ footer {
 
     .real-perfume-bottle {
 
-        width: 210px;
-        height: 350px;
+        width: 340px;
+        height: 530px;
 
     }
 
